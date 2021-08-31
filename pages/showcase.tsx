@@ -8,6 +8,15 @@ const mobile = true;
 const pc = true;
 const works = [
   {
+    name: "Quotiday",
+    link: "https://gamitask.web.app/",
+    img: "images/gamitask.png",
+    description: "The quickest way to get things done",
+    website,
+    pc,
+    mobile,
+  },
+  {
     name: "Hera",
     link: "https://hera.adeolaade.com/",
     img: "images/hera.svg",
