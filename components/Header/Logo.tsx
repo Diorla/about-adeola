@@ -12,12 +12,12 @@ export const StyledLogo = styled(StyledLink)`
   padding: ${logo.padding};
   color: white;
   font-weight: bold;
+  text-shadow: 0 0 2px black;
   & > span {
     opacity: 0;
     transition: 0.2s linear;
   }
   &:hover {
-    text-shadow: 0 0 2px black;
     transform: none;
     font-weight: bolder;
   }

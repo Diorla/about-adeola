@@ -22,5 +22,5 @@ const Image = styled.img`
 `;
 
 export default function FloatingImage() {
-  return <Image src="avatar.jpg" alt="Ade Adeola" />;
+  return <Image src="/avatar.jpg" alt="Ade Adeola" />;
 }

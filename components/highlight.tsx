@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaAppStore, FaApple, FaWindows, FaGooglePlay } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
+import Link from "next/link";
 
 interface HighlightProps {
   name: string;
@@ -21,7 +22,7 @@ const Wrapper = styled.div`
   margin: 8px;
 `;
 
-const Header = styled.a<{ image: string }>`
+const Header = styled.div<{ image: string }>`
   background-image: ${({ image }) => "url(" + image + ")"};
   display: inline-flex;
   height: 200px;
@@ -42,7 +43,7 @@ const Caption = styled.div`
   text-align: center;
 `;
 
-const Title = styled.div`
+const Title = styled.a`
   font-weight: bolder;
   color: #004d40;
 `;
@@ -78,7 +79,7 @@ const Highlight = ({
   const title = description.length > 30 ? description : "";
   return (
     <Wrapper>
-      <Header href={link} target="_blank" rel="noreferrer" image={img}>
+      <Header image={img}>
         <Temp>
           {website && (
             <>
@@ -100,7 +101,9 @@ const Highlight = ({
         </Temp>
       </Header>
       <Caption title={title}>
-        <Title>{name}</Title>
+        <Link href={`./project/${link}`} passHref>
+          <Title>{name}</Title>
+        </Link>
         <Description>
           {description.substr(0, 30)}
           {description.length > 30 && "..."}

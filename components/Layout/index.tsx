@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Wrapper from "./Wrapper";
 
-export default function Layout(props: {
+function Layout(props: {
   children: React.ReactNode;
   title?: string;
   canonical?: string;
@@ -50,3 +50,5 @@ export default function Layout(props: {
     </>
   );
 }
+
+export default Layout;

@@ -4,6 +4,7 @@ import styled from "styled-components";
  * // TODO: Use SVG animation
  * replace react-svg-morph with svg-css animation
  */
+
 const Menu = () => (
   <svg width="12" fill="#fff" height="12" viewBox="0 0 24 24">
     <path
@@ -20,11 +21,6 @@ const Menu = () => (
     ></path>
   </svg>
 );
-// const Menu = () => (
-//   <svg width="12" fill="#fff" height="12" viewBox="0 0 24 24">
-//     <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"></path>
-//   </svg>
-// );
 
 const Close = () => (
   <svg width="12" height="12" fill="#fff" viewBox="0 0 24 24">
@@ -38,7 +34,11 @@ const Close = () => (
 );
 
 const StyledMorph = styled.div`
-  cursor: url(cursor/pointer.svg), pointer;
+  cursor: url(/cursor/pointer.svg), pointer;
+  filter: drop-shadow(0px 0px 1px black);
+  &:hover {
+    filter: drop-shadow(0px 0px 2px black);
+  }
 `;
 
 const Morph = ({
@@ -58,4 +58,3 @@ const Morph = ({
 };
 
 export default Morph;
-// npx browserslist@latest --update-db

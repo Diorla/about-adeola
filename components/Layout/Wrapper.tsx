@@ -9,7 +9,7 @@ import MenuSlide from "../MenuSlide";
 const StyledContainer = styled.div`
   width: 100%;
   min-height: 100vh;
-  background-image: url(backgrounds/brain.jpg);
+  background-image: url(/backgrounds/brain.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -28,7 +28,13 @@ const Menu = styled.div`
   top: 0;
   z-index: 100000;
 `;
-export default function Wrapper({ children, active }: { children: React.ReactNode, active: string }) {
+export default function Wrapper({
+  children,
+  active,
+}: {
+  children: React.ReactNode;
+  active: string;
+}) {
   const [hidden, setHidden] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -45,7 +51,7 @@ export default function Wrapper({ children, active }: { children: React.ReactNod
             <MenuControl onClick={() => updateHiddenStatus()} hidden={hidden} />
           </Menu>
           <Main>{children}</Main>
-          {isLoaded && <MenuSlide hidden={hidden} active={active}/>}
+          {isLoaded && <MenuSlide hidden={hidden} active={active} />}
           <Footer />
         </div>
       </Layer>

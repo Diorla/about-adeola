@@ -1,4 +1,4 @@
-import globby from "globby";
+import { globby } from "globby";
 import { GetStaticProps } from "next";
 import React from "react";
 import styled from "styled-components";

@@ -11,7 +11,7 @@ import {
   SiTypescript,
   SiWire,
   SiElectron,
-  SiMaterialUi,
+  SiMaterialui,
 } from "react-icons/si";
 import styled, { keyframes } from "styled-components";
 import Layout from "../components/Layout";
@@ -224,7 +224,7 @@ const About = () => (
           </li>
           <li>
             <Icon color="#00b0ff">
-              <SiMaterialUi />
+              <SiMaterialui />
             </Icon>
             Material-UI
           </li>

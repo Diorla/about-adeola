@@ -1,0 +1,95 @@
+[
+  {
+    "name": "Quotiday",
+    "link": "quotiday",
+    "img": "/images/gamitask.png",
+    "description": "The quickest way to get things done",
+    "website": true,
+    "pc": true,
+    "mobile": true
+  },
+  {
+    "name": "Hera",
+    "link": "hera",
+    "img": "/images/hera.svg",
+    "description": "Spa and massage demo website",
+    "website": true
+  },
+  {
+    "name": "Character generator",
+    "link": "character_generator",
+    "img": "/images/chargen.svg",
+    "description": "Generates random attributes for fictional characters",
+    "mobile": true
+  },
+  {
+    "name": "Weblink",
+    "link": "weblink",
+    "img": "/images/linker.svg",
+    "description": "Cross browser, cross platform web bookmarking",
+    "website": true
+  },
+  {
+    "name": "Leadership",
+    "link": "leadership",
+    "img": "/images/leadership.jpeg",
+    "description": "Leadership and management tools",
+    "website": true
+  },
+  {
+    "name": "Image converter",
+    "link": "image_converter",
+    "img": "/images/image-converter.jpeg",
+    "description": "Convert and resize images",
+    "website": true
+  },
+  {
+    "name": "App icons",
+    "link": "app_icons",
+    "img": "/images/app-icons.jpg",
+    "description": "Mobile theme app icons",
+    "mobile": true
+  },
+  {
+    "name": "Social app",
+    "link": "social_app",
+    "img": "/images/profile.jpg",
+    "description": "User profile page in a mobile app",
+    "mobile": true
+  },
+  {
+    "name": "E-commerce app",
+    "link": "e_commerce_app",
+    "img": "/images/checkout.jpg",
+    "description": "Checkout page in a mobile app",
+    "mobile": true
+  },
+  {
+    "name": "Mortgage calculator",
+    "link": "mortgage_calculator",
+    "img": "/images/mortgage-calculator.jpg",
+    "description": "Calculate monthly payment",
+    "mobile": true
+  },
+  {
+    "name": "Digit-all",
+    "link": "digit_all",
+    "img": "/images/digit-all.jpeg",
+    "description": "All your electronics here",
+    "website": true
+  },
+  {
+    "name": "Puzzle",
+    "link": "puzzle",
+    "img": "/images/puzzle.jpeg",
+    "description": "Solve the puzzle in record time",
+    "website": true
+  },
+  {
+    "name": "Calculator",
+    "link": "calculator",
+    "img": "/images/calculator.jpeg",
+    "description": "Calculator with multiple themes",
+    "website": true
+  }
+]
