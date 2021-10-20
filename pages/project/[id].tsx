@@ -54,6 +54,7 @@ const H2 = styled.h2`
 const FeatureMessage = styled.div`
   flex: 1;
   text-align: center;
+  min-width: 200px;
 `;
 
 const CTA = styled.a`
@@ -61,7 +62,7 @@ const CTA = styled.a`
   background: teal;
   color: white;
   text-decoration: none;
-  padding: 4px;
+  padding: 2px 4px;
   border-radius: 4px;
   &:hover {
     text-decoration: none;

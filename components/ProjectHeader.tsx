@@ -8,6 +8,7 @@ const ProjectHeader = styled.div`
   margin-bottom: 8px;
   border-bottom: 1px solid silver;
   padding-bottom: 8px;
+  text-align: center;
 `;
 
 export default ProjectHeader;
