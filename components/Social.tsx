@@ -84,7 +84,7 @@ export default function Social() {
         <FaTwitter />
       </a>
       <a
-        href="https://medium.com/@dihorla/"
+        href="https://dihorla.medium.com/"
         target="_blank"
         rel="noreferrer"
         className="medium"
