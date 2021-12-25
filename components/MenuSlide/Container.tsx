@@ -4,6 +4,7 @@ import Contact from "../contact";
 import Social from "../Social";
 import Link from "../Link";
 import HeaderLink from "../Header/Link";
+import breakpoints from "theme/breakpoints";
 
 const Main = styled.div`
   display: flex;
@@ -22,11 +23,16 @@ const Section = styled.div`
   align-items: center;
 `;
 
+const LeftSection = styled(Section)`
+  @media screen and (min-width: ${breakpoints.sm}) {
+    display: none;
+  }
+`;
 export default function Container({ active }: { active: string }) {
   return (
     <FadeIn>
       <Main>
-        <Section>
+        <LeftSection>
           <HeaderLink href="/" title="Home" active={active === "home"} />
           <HeaderLink href="/about" title="About" active={active === "about"} />
           <HeaderLink
@@ -39,7 +45,7 @@ export default function Container({ active }: { active: string }) {
             title="Resources"
             active={active === "resources"}
           />
-        </Section>
+        </LeftSection>
         <Section>
           <Contact />
           <Social />

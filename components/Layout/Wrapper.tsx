@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { useState } from "react";
+import Link from "next/link";
 import Layer from "./Layer";
 import Footer from "./Footer";
 import Logo from "../Header/Logo";
 import MenuControl from "../MenuControl";
 import MenuSlide from "../MenuSlide";
+import HeaderLink from "./HeaderLink";
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -47,7 +49,18 @@ export default function Wrapper({
       <Layer>
         <div>
           <Menu>
-            <Logo />
+            <div>
+              <Logo />
+              <Link href="/about">
+                <HeaderLink>About</HeaderLink>
+              </Link>
+              <Link href="/showcase">
+                <HeaderLink>Showcase</HeaderLink>
+              </Link>
+              <Link href="/resources">
+                <HeaderLink>Resources</HeaderLink>
+              </Link>
+            </div>
             <MenuControl onClick={() => updateHiddenStatus()} hidden={hidden} />
           </Menu>
           <Main>{children}</Main>

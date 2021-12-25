@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const StyledLink = styled.a<{ active?: boolean }>`
   color: ${({ active }) => (active ? "#ffffff" : "#ffffffcc")};
-  font-size: 48px;
+  font-size: 36px;
   transition: 0.3s linear;
   transform-origin: top;
   &:hover {
