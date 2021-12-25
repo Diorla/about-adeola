@@ -12,6 +12,19 @@ import {
   SiWire,
   SiElectron,
   SiMaterialui,
+  SiAntdesign,
+  SiGraphql,
+  SiExpo,
+  SiRedux,
+  SiJest,
+  SiSass,
+  SiSemanticuireact,
+  SiAuth0,
+  SiFigma,
+  SiStorybook,
+  SiStyledcomponents,
+  SiFramer,
+  SiTestinglibrary,
 } from "react-icons/si";
 import styled, { keyframes } from "styled-components";
 import Layout from "../components/Layout";
@@ -193,12 +206,6 @@ const About = () => (
             Adobe XD
           </li>
           <li>
-            <Icon color="">
-              <SiWire />
-            </Icon>
-            Wireframe
-          </li>
-          <li>
             <Icon color="#f54d27">
               <SiGit />
             </Icon>
@@ -227,6 +234,84 @@ const About = () => (
               <SiMaterialui />
             </Icon>
             Material-UI
+          </li>
+          <li>
+            <Icon color="#1890ff">
+              <SiAntdesign />
+            </Icon>
+            ANT
+          </li>
+          <li>
+            <Icon color="#e535ab">
+              <SiGraphql />
+            </Icon>
+            GraphQL
+          </li>
+          <li>
+            <Icon color="#1b1f23">
+              <SiExpo />
+            </Icon>
+            Expo
+          </li>
+          <li>
+            <Icon color="#764abc">
+              <SiRedux />
+            </Icon>
+            Redux
+          </li>
+          <li>
+            <Icon color="#c21325">
+              <SiJest />
+            </Icon>
+            Jest
+          </li>
+          <li>
+            <Icon color="#c76494">
+              <SiSass />
+            </Icon>
+            SASS
+          </li>
+          <li>
+            <Icon color="#35bdb2">
+              <SiSemanticuireact />
+            </Icon>
+            Semantic UI
+          </li>
+          <li>
+            <Icon color="#333">
+              <SiAuth0 />
+            </Icon>
+            Authentication
+          </li>
+          <li>
+            <Icon color="#9f61ff">
+              <SiFigma />
+            </Icon>
+            Figma
+          </li>
+          <li>
+            <Icon color="#ff4785">
+              <SiStorybook />
+            </Icon>
+            Storybook
+          </li>
+          <li>
+            <Icon color="#cf76b3" style={{ fontSize: 24 }}>
+              <SiStyledcomponents />
+            </Icon>
+            Styled-components
+          </li>
+          <li>
+            <Icon color="#0099ff">
+              <SiFramer />
+            </Icon>
+            Framer
+          </li>
+          <li>
+            <Icon color="#f33f3e">
+              <SiTestinglibrary />
+            </Icon>
+            Testing Library
           </li>
         </ul>
       </div>
