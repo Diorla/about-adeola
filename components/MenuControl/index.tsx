@@ -36,6 +36,7 @@ const Close = () => (
 const StyledMorph = styled.div`
   cursor: url(/cursor/pointer.svg), pointer;
   filter: drop-shadow(0px 0px 1px black);
+  display: flex;
   &:hover {
     filter: drop-shadow(0px 0px 2px black);
   }
