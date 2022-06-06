@@ -101,7 +101,7 @@ const Highlight = ({
         </Temp>
       </Header>
       <Caption title={title}>
-        <Link href={`./project/${link}`} passHref>
+        <Link href={`/project/${link}`} passHref>
           <Title>{name}</Title>
         </Link>
         <Description>
