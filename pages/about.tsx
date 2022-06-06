@@ -128,7 +128,7 @@ const About = () => (
       </div>
       <div>
         <ul>
-          <li>Hi! I am Adeola, a software engineer based in Nigeria.</li>
+          <li>Hi! I am Adeola, a software engineer based in the UK.</li>
           <li>
             I enjoy programming and creating things for the web or mobile
             devices.
@@ -137,7 +137,7 @@ const About = () => (
           <li>
             Local Time:{" "}
             {new Date().toLocaleTimeString("en-GB", {
-              timeZone: "Africa/Lagos",
+              timeZone: "Europe/London",
             })}
           </li>
         </ul>
