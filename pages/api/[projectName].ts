@@ -1,4 +1,3 @@
-// projectName
 import projects from "../../api/projects.json";
 import Work from "../../interfaces/Work";
 

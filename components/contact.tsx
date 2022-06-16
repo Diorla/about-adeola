@@ -25,7 +25,7 @@ function submitForm(
 }
 
 const StyledForm = styled.form`
-  width: 100%;
+  width: clamp(200px, 100%, 640px);
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@ const Contact = () => {
         type="text"
         name="username"
         required
-        placeholder="John Doe"
+        placeholder="Jane Doe"
       />
       <Input
         label="Email"

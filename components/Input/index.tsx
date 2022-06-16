@@ -22,6 +22,7 @@ const Input: React.FC<InputProps> = ({
         value={value}
         onChange={onChange}
         id={label && preset}
+        rows={4}
         {...props}
       />
     </FormGroup>

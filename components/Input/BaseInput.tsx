@@ -4,7 +4,7 @@ export default styled.input`
   font-size: 16px;
   border: none;
   box-shadow: inset 0 0 2px black;
-  padding: 4px 8px;
+  padding: 8px 12px;
   outline: none;
   background: transparent;
   color: #ffffff;
