@@ -30,7 +30,16 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" dir="ltr">
-        <Head />
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

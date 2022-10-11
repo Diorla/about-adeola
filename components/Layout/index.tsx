@@ -36,14 +36,6 @@ function Layout(props: {
         <meta name="twitter:image" content={image} />
         <meta name="twitter:creator" content="@therealdanvega" />
         <title>{title}</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap"
-          rel="stylesheet"
-        />
         <link rel="canonical" href={`https://adeolaade.com${canonical}`} />
       </Head>
       <Wrapper active={active}>{children}</Wrapper>
