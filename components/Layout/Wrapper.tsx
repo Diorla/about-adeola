@@ -63,7 +63,7 @@ export default function Wrapper({
             </div>
             <MenuControl
               onClick={() => updateHiddenStatus()}
-              clicked={hidden}
+              clicked={!hidden}
             />
           </Menu>
           <Main>{children}</Main>
