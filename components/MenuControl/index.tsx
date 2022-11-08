@@ -1,9 +1,4 @@
-import { MorphReplace } from "react-svg-morph";
 import styled from "styled-components";
-/**
- * // TODO: Use SVG animation
- * replace react-svg-morph with svg-css animation
- */
 
 const Menu = () => (
   <svg width="12" fill="#fff" height="12" viewBox="0 0 24 24">
@@ -33,28 +28,54 @@ const Close = () => (
   </svg>
 );
 
-const StyledMorph = styled.div`
+const StyledMenu = styled.main`
   cursor: url(/cursor/pointer.svg), pointer;
   filter: drop-shadow(0px 0px 1px black);
-  display: flex;
+  width: 40px;
+
   &:hover {
     filter: drop-shadow(0px 0px 2px black);
+  }
+
+  cursor: pointer;
+
+  & div {
+    height: 4px;
+    border-radius: 4px;
+    margin: 8px 0;
+    transition: 0.75s linear;
+    background-color: white;
+  }
+
+  &.on > div {
+    opacity: 0;
+    transform: rotate(360deg) scale(0.2);
+  }
+
+  &.on > div:first-child {
+    opacity: 1;
+    transform: rotate(45deg) translate(8px, 9px);
+  }
+
+  &.on > div:last-child {
+    opacity: 1;
+    transform: rotate(-45deg) translate(8px, -9px);
   }
 `;
 
 const Morph = ({
   onClick,
-  hidden,
+  clicked,
 }: {
   onClick: (e: React.SyntheticEvent) => void;
-  hidden?: boolean;
+  clicked?: boolean;
 }) => {
   return (
-    <StyledMorph onClick={onClick}>
-      <MorphReplace width={36} height={36}>
-        {hidden ? <Menu key="a" /> : <Close key="b" />}
-      </MorphReplace>
-    </StyledMorph>
+    <StyledMenu onClick={onClick} className={clicked ? "on" : ""}>
+      <div></div>
+      <div></div>
+      <div></div>
+    </StyledMenu>
   );
 };
 

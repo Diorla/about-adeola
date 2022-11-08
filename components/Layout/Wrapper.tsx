@@ -61,7 +61,10 @@ export default function Wrapper({
                 <HeaderLink>Resources</HeaderLink>
               </Link>
             </div>
-            <MenuControl onClick={() => updateHiddenStatus()} hidden={hidden} />
+            <MenuControl
+              onClick={() => updateHiddenStatus()}
+              clicked={hidden}
+            />
           </Menu>
           <Main>{children}</Main>
           {isLoaded && <MenuSlide hidden={hidden} active={active} />}
