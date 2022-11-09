@@ -8,7 +8,7 @@ const HeaderLink = styled.a`
   color: white;
   font-weight: 500;
   font-size: 21px;
-  cursor: pointer;
+  cursor: url(/cursor/pointer.svg), pointer;
   background-image: ${generateGradient("rgba(0, 0, 0, 0)")},
     ${generateGradient("white")};
   background-size: 100% 2px, 0 2px;

@@ -37,8 +37,6 @@ const StyledMenu = styled.main`
     filter: drop-shadow(0px 0px 2px black);
   }
 
-  cursor: pointer;
-
   & div {
     height: 4px;
     border-radius: 4px;

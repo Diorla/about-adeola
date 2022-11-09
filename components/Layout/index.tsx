@@ -34,7 +34,7 @@ function Layout(props: {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:site" content="@dihorla" />
         <meta name="twitter:image" content={image} />
-        <meta name="twitter:creator" content="@therealdanvega" />
+        <meta name="twitter:creator" content="@dihorla" />
         <title>{title}</title>
         <link rel="canonical" href={`https://adeolaade.com${canonical}`} />
       </Head>

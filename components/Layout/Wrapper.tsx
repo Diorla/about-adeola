@@ -29,6 +29,7 @@ const Menu = styled.div`
   position: sticky;
   top: 0;
   z-index: 100000;
+  background-color: teal;
 `;
 export default function Wrapper({
   children,

@@ -7,7 +7,7 @@ import priority from "../../theme/priority";
 const styles: Header = {
   link: {
     color: palette.primary.main,
-    cursor: "pointer",
+    cursor: "url(/cursor/pointer.svg), pointer",
     padding: "4px",
     margin: "4px",
   },
