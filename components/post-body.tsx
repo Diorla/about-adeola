@@ -32,9 +32,29 @@ const PostWrapper = styled.div`
     font-family: monospace;
     font-size: 14px;
     margin: 8px 0;
+    border-left: 4px solid teal;
+    padding-left: 8px;
   }
   & p {
     margin: 8px 0;
+  }
+  & .language-css,
+  .attr-value,
+  .string {
+    color: green;
+  }
+  & .selector,
+  .tag,
+  .keyword {
+    color: red;
+  }
+  & .punctuation {
+    color: cornflowerblue;
+  }
+  & .property,
+  .attr-name,
+  .function {
+    color: blue;
   }
   & p code {
     color: #ad1457;
@@ -44,6 +64,16 @@ const PostWrapper = styled.div`
   }
   & li {
     list-style: square;
+  }
+  & nav.toc:before {
+    content: "Table of Contents";
+    font-size: 32px;
+  }
+  & nav ol {
+    margin-left: 32px;
+  }
+  & nav li {
+    list-style: none;
   }
 `;
 

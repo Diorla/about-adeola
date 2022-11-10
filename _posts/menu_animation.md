@@ -20,17 +20,6 @@ I started out by using [react-svg-morph](https://www.npmjs.com/package/react-svg
 
 So I decided to create a my own hamburger menu icon and the answer is not animating svg, in fact, my approach could not be further from [react-svg-morph](https://www.npmjs.com/package/react-svg-morph).
 
-## Contents
-
-- [Introduction](#introduction)
-- [Contents](#contents)
-- [TLDR](#tldr)
-  - [HTML](#html)
-  - [CSS](#css)
-  - [Javascript](#javascript)
-- [Details](#details)
-- [Credits](#credits)
-
 ## TLDR
 
 > Don't have time to read the full article and just want to see the full code, here it is

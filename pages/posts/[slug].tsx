@@ -20,15 +20,18 @@ const Wrapper = styled.main`
   min-height: calc(100vh - 135px);
 `;
 
-export default function Post({ post, morePosts, preview }: Props) {
+const Top = styled.a`
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+`;
+
+export default function Post({ post }: Props) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  const { title, coverImage, date, content, excerpt } = post;
-  console.log({ preview });
-  console.log({ title, coverImage, date, content });
-  console.log(morePosts);
+  const { title, excerpt } = post;
 
   return (
     <Layout
@@ -44,8 +47,10 @@ export default function Post({ post, morePosts, preview }: Props) {
           <Head>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
+          <div id="to-the-top"></div>
           <PostHeader {...post} />
           <PostBody content={post.content} />
+          <Top href="#to-the-top">Top</Top>
         </Wrapper>
       )}
     </Layout>
