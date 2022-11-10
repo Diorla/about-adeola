@@ -34,6 +34,7 @@ const PostWrapper = styled.div`
     margin: 8px 0;
     border-left: 4px solid teal;
     padding-left: 8px;
+    overflow-y: scroll;
   }
   & p {
     margin: 8px 0;
