@@ -13,7 +13,7 @@ function Layout(props: {
     active,
     canonical = "/",
     title = "Adeola Ade",
-    description = "Welcome to Adeola Ade's personal website.",
+    description = "Welcome to Adeola Ade's personal website. Frontend developer in London, United Kingdom",
   } = props;
   const image = `https://og-image.now.sh/${encodeURI(
     title

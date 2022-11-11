@@ -41,6 +41,11 @@ export default function Container({ active }: { active: string }) {
             active={active === "showcase"}
           />
           <HeaderLink
+            href="/til"
+            title="Thing I've learnt"
+            active={active === "til"}
+          />
+          <HeaderLink
             href="/resources"
             title="Resources"
             active={active === "resources"}
