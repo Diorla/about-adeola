@@ -1,3 +1,4 @@
+import SectionTitle from "components/SectionTitle";
 import styled from "styled-components";
 import Tools from "./tools";
 
@@ -17,12 +18,6 @@ const ImageWrapper = styled.div`
   align-items: center;
 `;
 
-const Header = styled.div`
-  font-size: ${({ theme }) => theme.font.headerTwo};
-  margin-top: -40px;
-  text-align: center;
-`;
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -40,7 +35,7 @@ export default function About() {
       <ImageWrapper>
         <ProfileImage />
       </ImageWrapper>
-      <Header>Hello, I am Adeola</Header>
+      <SectionTitle style={{ marginTop: -40 }}>Hello, I am Adeola</SectionTitle>
       <div style={{ textAlign: "center" }}>
         <div>I am a web designer and developer based in London.</div>
         <div>

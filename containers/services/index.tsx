@@ -1,9 +1,5 @@
+import SectionTitle from "components/SectionTitle";
 import styled from "styled-components";
-
-const Title = styled.div`
-  font-size: ${({ theme }) => theme.font.headerTwo};
-  text-align: center;
-`;
 
 const Row = styled.div`
   display: flex;
@@ -43,7 +39,7 @@ const Item = ({
 export default function Services() {
   return (
     <div>
-      <Title>Services</Title>
+      <SectionTitle>Services</SectionTitle>
       <Row>
         <Item src="/pencil.png" title="Design">
           <li>Design web layout and structure</li>

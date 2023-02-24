@@ -49,7 +49,7 @@ export default function Footer() {
         Be ashamed to die until you’ve score some victory for humanity - Horace
         Mann
       </TextCenter>
-      <TextCenter>
+      <TextCenter style={{ marginBottom: 0 }}>
         Made with <span style={{ color: "red" }}>♥️</span> by Adeola Ade
       </TextCenter>
     </Wrapper>

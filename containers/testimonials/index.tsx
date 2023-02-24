@@ -1,3 +1,4 @@
+import SectionTitle from "components/SectionTitle";
 import { useState } from "react";
 import { useBoolean, useInterval } from "react-use";
 import styled from "styled-components";
@@ -190,14 +191,9 @@ export default function Testimonials() {
     } else executiveUpdate(idx);
   };
 
-  const Title = styled.div`
-    font-size: ${({ theme }) => theme.font.headerTwo};
-    text-align: center;
-  `;
-
   return (
     <Main>
-      <Title>Testimonials</Title>
+      <SectionTitle>Testimonials</SectionTitle>
       <Container>
         <Cards className="cards">
           {images.map((item, idx) => (

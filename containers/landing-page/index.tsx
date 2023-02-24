@@ -25,7 +25,7 @@ const StyledLanding = styled.div`
   background-size: 200% 100%;
 `;
 
-const Title = styled.div`
+const Title = styled.h1`
   font-size: ${({ theme }) => theme.font.headerOne};
   line-height: 40px;
 `;
