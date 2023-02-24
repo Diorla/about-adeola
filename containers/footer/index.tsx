@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -5,7 +6,7 @@ const Wrapper = styled.div`
   color: white;
 `;
 
-const Link = styled.a`
+const StyledLink = styled.a`
   color: ${({ theme }) => theme.color.primaryLight};
 `;
 
@@ -24,25 +25,28 @@ export default function Footer() {
   return (
     <Wrapper>
       <Line>
-        <Link
+        <StyledLink
           href="https://dev.to/diorla"
           target="_blank"
           referrerPolicy="no-referrer"
         >
           Blogs
-        </Link>
-        <Link href="#" target="_blank" referrerPolicy="no-referrer">
+        </StyledLink>
+        <StyledLink href="#" target="_blank" referrerPolicy="no-referrer">
           Privacy and Policy
-        </Link>
-        <Link
+        </StyledLink>
+        <StyledLink
           href="https://github.com/Diorla/about-adeola/blob/main/LICENSE"
           target="_blank"
           referrerPolicy="no-referrer"
         >
           Terms of use
-        </Link>
-        <Link href="#" target="_blank" referrerPolicy="no-referrer">
+        </StyledLink>
+        <StyledLink href="#" target="_blank" referrerPolicy="no-referrer">
           Resources
+        </StyledLink>
+        <Link href="/sitemap">
+          <StyledLink>Sitemap</StyledLink>
         </Link>
       </Line>
       <TextCenter>

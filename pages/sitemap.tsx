@@ -1,9 +1,9 @@
+import Layout from "components/layout";
 import { globby } from "globby";
 import { GetStaticProps } from "next";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import Layout from "../components/Layout";
-import Link from "../components/Link";
 
 const generateSitemap = async () => {
   const pages = await globby([
@@ -44,16 +44,15 @@ const formatText = (link: string) =>
 
 export default function Sitemap({ links }: { links: string[] }) {
   return (
-    <Layout title="sitemap" active="sitemap">
+    <Layout title="sitemap">
       <Header>Sitemap</Header>
       <Column>
         {links &&
           links.map((route) => (
             <div key={route}>
-              <Link
-                href={`https://adeolaade.com${route}`}
-                title={formatText(route)}
-              />
+              <Link href={`https://adeolaade.com${route}`}>
+                <a>{formatText(route)}</a>
+              </Link>
             </div>
           ))}
       </Column>
