@@ -1,18 +1,12 @@
 import type { AppProps } from "next/app";
 import "../styles/global.css";
 import { ThemeProvider } from "styled-components";
-import palette from "../theme/palette";
-import timing from "../theme/timing";
-import breakpoints from "../theme/breakpoints";
-import elevation from "../theme/elevation";
-import priority from "../theme/priority";
+import color from "theme/color";
+import font from "theme/font";
 
 const theme = {
-  breakpoints,
-  elevation,
-  palette,
-  priority,
-  timing,
+  color,
+  font,
 };
 export default function App({ Component, pageProps }: AppProps) {
   return (

@@ -32,3 +32,6 @@ test
 
 # bots
 public/sitemap.xml
+
+# temp
+/temp
