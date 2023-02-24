@@ -18,6 +18,7 @@ const Wrapper = styled.div<{ offset: boolean }>`
   box-shadow: ${({ theme, offset }) =>
     offset ? `0 1px 8px ${theme.color.shadeDark}` : "none"};
   transition: 0.5s linear;
+  align-items: center;
 `;
 
 export default function NavBar({
@@ -32,7 +33,9 @@ export default function NavBar({
   return (
     <Wrapper offset={y > 50}>
       <Link href="/">
-        <img src="/white-logo.png" alt="Logo" height={24} />
+        <a>
+          <img src="/white-logo.png" alt="Logo" height={24} />
+        </a>
       </Link>
       {width > 640 ? (
         <Nav>

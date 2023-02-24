@@ -37,6 +37,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
 `;
 
 const Tools = () => (

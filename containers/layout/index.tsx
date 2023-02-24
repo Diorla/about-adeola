@@ -1,10 +1,10 @@
 import Head from "next/head";
-import { useWindowSize } from "react-use";
 import styled from "styled-components";
 
 const StyledLayout = styled.main`
   background-color: ${({ theme }) => theme.color.primaryLight};
   min-height: 100vh;
+  overflow-x: hidden;
 `;
 
 function Layout(props: {
@@ -20,8 +20,6 @@ function Layout(props: {
     description = "Welcome to Adeola Ade's personal website. Frontend developer in London, United Kingdom",
   } = props;
 
-  // To hide sidebar in case of window resize
-  const { width } = useWindowSize();
   const image = `https://og-image.now.sh/${encodeURI(
     title
   )}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg&images=https%3A%2F%2Fucarecdn.com%2F79dc47ef-1afc-4bcb-bb35-167d1bb8348b%2Fadeola.jpg`;

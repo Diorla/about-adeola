@@ -14,6 +14,7 @@ const Line = styled.div`
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 `;
 
 const TextCenter = styled.div`
