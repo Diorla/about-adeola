@@ -198,6 +198,7 @@ export default function Testimonials() {
         <Cards className="cards">
           {images.map((item, idx) => (
             <Card
+              key={idx}
               position={getPosition(active, idx)}
               onClick={() => {
                 console.log("idx", idx);

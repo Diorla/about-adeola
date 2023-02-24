@@ -1,4 +1,4 @@
-import Layout from "components/layout";
+import Layout from "containers/layout";
 import { globby } from "globby";
 import { GetStaticProps } from "next";
 import Link from "next/link";

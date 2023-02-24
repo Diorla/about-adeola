@@ -2,12 +2,12 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const NavButton = styled.a<{ active?: boolean }>`
-  margin-right: 18px;
-  background: ${({ theme, active }) =>
-    active ? theme.color.primary : theme.color.secondary};
+  width: 100%;
   font-size: 16px;
+
+  background: ${({ theme, active }) =>
+    active ? theme.color.primary : theme.color.primaryDark};
   padding: 4px 12px;
-  border-radius: 18px;
   color: black;
   transition: 0.5s linear;
   font-weight: 600;
@@ -15,31 +15,35 @@ const NavButton = styled.a<{ active?: boolean }>`
   &:hover {
     text-decoration: none;
     background: ${({ theme, active }) =>
-      active ? theme.color.primaryDark : theme.color.secondaryDark};
+      active ? theme.color.primaryLight : theme.color.primary};
     color: white;
   }
 `;
 
-export default function NavItem({
+export default function MenuItem({
   children,
-  href,
+  href = "",
   active,
   external,
+  onClick,
 }: {
   children: string;
-  href: string;
+  href?: string;
   active?: boolean;
   external?: boolean;
+  onClick?: () => void;
 }) {
   if (external)
     return (
-      <NavButton active={active} href={href}>
+      <NavButton active={active} href={href} onClick={onClick}>
         {children}
       </NavButton>
     );
   return (
     <Link href={href}>
-      <NavButton active={active}>{children}</NavButton>
+      <NavButton active={active} onClick={onClick}>
+        {children}
+      </NavButton>
     </Link>
   );
 }

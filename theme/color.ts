@@ -2,7 +2,7 @@ import { Color } from "styled-components";
 
 const color: Color = {
   primary: "salmon",
-  primaryDark: "#fb998e",
+  primaryDark: "#f8412c",
   primaryLight: "#fb998e",
   secondary: "#44A3A2",
   secondaryDark: "#368282",

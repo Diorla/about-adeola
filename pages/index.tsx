@@ -1,5 +1,5 @@
 import LandingPage from "containers/landing-page";
-import Layout from "components/layout";
+import Layout from "containers/layout";
 import About from "containers/about";
 import NavBar from "containers/nav-bar";
 import Works from "containers/works";
@@ -8,11 +8,16 @@ import Testimonials from "containers/testimonials";
 import GetQuote from "containers/get-quote";
 import Contact from "containers/contact";
 import Footer from "containers/footer";
+import { useState } from "react";
 
 export default function Home() {
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <Layout>
-      <NavBar />
+    <Layout
+      toggleSidebar={() => setShowSidebar(!showSidebar)}
+      showSidebar={showSidebar}
+    >
+      <NavBar toggleSidebar={() => setShowSidebar(!showSidebar)} />
       <LandingPage />
       <About />
       <Works />
