@@ -8,7 +8,7 @@ import submitForm from "./submitForm";
 import Feedback from "./Feedback";
 
 export default function Form() {
-  const [status, setStatus] = useState("ERROR");
+  const [status, setStatus] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
