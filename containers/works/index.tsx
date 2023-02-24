@@ -1,4 +1,6 @@
 import SectionTitle from "components/SectionTitle";
+import { useRef } from "react";
+import { useIntersection } from "react-use";
 import styled from "styled-components";
 import Work from "./Work";
 
@@ -27,11 +29,29 @@ const Subtitle = styled.div`
   text-align: center;
 `;
 
-export default function Works() {
+export default function Works({
+  setPath,
+}: {
+  setPath: (path: string) => void;
+}) {
+  const ref = useRef(null);
+  const intersection = useIntersection(ref, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
+
+  if (intersection && intersection.intersectionRatio >= 1) setPath("works");
+  console.log(
+    "intersection && intersection.intersectionRatio >= 1",
+    intersection && intersection.intersectionRatio
+  );
   return (
     <Wrapper>
       <div style={{ height: 70 }} />
-      <SectionTitle>My works</SectionTitle>
+      <SectionTitle ref={ref} id="works">
+        My works
+      </SectionTitle>
       <Subtitle>Some of my recent work</Subtitle>
       <Work />
       <Work />

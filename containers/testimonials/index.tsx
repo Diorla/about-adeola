@@ -1,6 +1,6 @@
 import SectionTitle from "components/SectionTitle";
-import { useState } from "react";
-import { useBoolean, useInterval } from "react-use";
+import { useRef, useState } from "react";
+import { useBoolean, useIntersection, useInterval } from "react-use";
 import styled from "styled-components";
 
 const Main = styled.main`
@@ -151,7 +151,20 @@ const CardTitle = styled.div`
   font-size: ${({ theme }) => theme.font.headerThree};
 `;
 
-export default function Testimonials() {
+export default function Testimonials({
+  setPath,
+}: {
+  setPath: (path: string) => void;
+}) {
+  const ref = useRef(null);
+  const intersection = useIntersection(ref, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
+
+  if (intersection && intersection.intersectionRatio >= 1)
+    setPath("testimonial");
   // TODO: Set it to false
   /**
    * So it will only start running when it comes into screen and
@@ -184,7 +197,6 @@ export default function Testimonials() {
     setActive(idx);
   };
   const updateImageList = (idx: number) => {
-    console.log(idx);
     if (idx === active) {
       if (idx === 0) executiveUpdate(2);
       else executiveUpdate(idx - 1);
@@ -193,7 +205,9 @@ export default function Testimonials() {
 
   return (
     <Main>
-      <SectionTitle>Testimonials</SectionTitle>
+      <SectionTitle ref={ref} id="testimonial">
+        Testimonials
+      </SectionTitle>
       <Container>
         <Cards className="cards">
           {images.map((item, idx) => (
@@ -201,7 +215,6 @@ export default function Testimonials() {
               key={idx}
               position={getPosition(active, idx)}
               onClick={() => {
-                console.log("idx", idx);
                 updateImageList(idx);
               }}
               onMouseEnter={() => setIsRunning(false)}

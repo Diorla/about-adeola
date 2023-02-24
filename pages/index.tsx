@@ -9,26 +9,31 @@ import GetQuote from "containers/get-quote";
 import Contact from "containers/contact";
 import Footer from "containers/footer";
 import { useState } from "react";
+import Sidebar from "containers/sidebar";
 
 export default function Home() {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [path, setPath] = useState("");
+
   return (
-    <Layout
-      toggleSidebar={() => setShowSidebar(!showSidebar)}
-      showSidebar={showSidebar}
-    >
-      <NavBar toggleSidebar={() => setShowSidebar(!showSidebar)} />
-      <LandingPage />
-      <About />
-      <Works />
-      <Services />
-      <Testimonials />
+    <Layout>
+      <NavBar toggleSidebar={() => setShowSidebar(!showSidebar)} path={path} />
+      <LandingPage setPath={setPath} />
+      <About setPath={setPath} />
+      <Works setPath={setPath} />
+      <Services setPath={setPath} />
+      <Testimonials setPath={setPath} />
       <GetQuote />
-      <Contact />
+      <Contact setPath={setPath} />
       <Footer />
       <div style={{ textAlign: "center", padding: 8 }}>
         Copyright © {new Date().getFullYear()}
       </div>
+      <Sidebar
+        toggleSidebar={() => setShowSidebar(!showSidebar)}
+        showSidebar={showSidebar}
+        path={path}
+      />
     </Layout>
   );
 }

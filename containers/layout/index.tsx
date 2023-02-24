@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useWindowSize } from "react-use";
 import styled from "styled-components";
-import Sidebar from "./sidebar";
 
 const StyledLayout = styled.main`
   background-color: ${({ theme }) => theme.color.primaryLight};
@@ -13,16 +12,12 @@ function Layout(props: {
   title?: string;
   canonical?: string;
   description?: string;
-  toggleSidebar?: () => void;
-  showSidebar?: boolean;
 }) {
   const {
     children,
     canonical = "/",
     title = "Adeola Ade",
     description = "Welcome to Adeola Ade's personal website. Frontend developer in London, United Kingdom",
-    toggleSidebar,
-    showSidebar,
   } = props;
 
   // To hide sidebar in case of window resize
@@ -50,12 +45,7 @@ function Layout(props: {
         <title>{title}</title>
         <link rel="canonical" href={`https://adeolaade.com${canonical}`} />
       </Head>
-      <StyledLayout>
-        {children}
-        {toggleSidebar && width <= 640 && (
-          <Sidebar toggleSidebar={toggleSidebar} showSidebar={!!showSidebar} />
-        )}
-      </StyledLayout>
+      <StyledLayout>{children}</StyledLayout>
     </>
   );
 }

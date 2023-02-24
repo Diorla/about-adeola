@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useIntersection } from "react-use";
 import styled, { keyframes } from "styled-components";
 const backgroundShift = keyframes`
   0% {
@@ -42,16 +43,22 @@ const CTA = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
 `;
 
-export default function LandingPage() {
-  const [hash, setHash] = useState("");
+export default function LandingPage({
+  setPath,
+}: {
+  setPath: (path: string) => void;
+}) {
+  const ref = useRef(null);
+  const intersection = useIntersection(ref, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
 
-  useEffect(() => {
-    setHash(location.hash);
-  }, []);
-
+  if (intersection && intersection.intersectionRatio >= 1) setPath("");
   return (
     <StyledLanding>
-      <div></div>
+      <div ref={ref}></div>
       <CTA>
         <Title>Web developer</Title>
         <Subtitle>Design, Developer, Create something beautiful</Subtitle>

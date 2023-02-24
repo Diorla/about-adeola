@@ -1,4 +1,6 @@
 import SectionTitle from "components/SectionTitle";
+import { useRef } from "react";
+import { useIntersection } from "react-use";
 import styled from "styled-components";
 
 const Row = styled.div`
@@ -36,10 +38,22 @@ const Item = ({
   );
 };
 
-export default function Services() {
+export default function Services({
+  setPath,
+}: {
+  setPath: (path: string) => void;
+}) {
+  const ref = useRef(null);
+  const intersection = useIntersection(ref, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
+
+  if (intersection && intersection.intersectionRatio >= 1) setPath("services");
   return (
-    <div>
-      <SectionTitle>Services</SectionTitle>
+    <div id="services">
+      <SectionTitle ref={ref}>Services</SectionTitle>
       <Row>
         <Item src="/pencil.png" title="Design">
           <li>Design web layout and structure</li>

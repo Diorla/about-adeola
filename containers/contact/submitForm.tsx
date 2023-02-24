@@ -20,7 +20,7 @@ export default function submitForm(
     <div>${formDetails.message}</div>
     <div>${formDetails.phoneNumber}</div>`
   );
-  console.log(data.entries());
+
   const xhr = new XMLHttpRequest();
   xhr.open(form.method, form.action);
   xhr.setRequestHeader("Accept", "application/json");

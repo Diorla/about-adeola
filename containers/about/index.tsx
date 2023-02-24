@@ -1,4 +1,6 @@
 import SectionTitle from "components/SectionTitle";
+import { useRef } from "react";
+import { useIntersection } from "react-use";
 import styled from "styled-components";
 import Tools from "./tools";
 
@@ -29,10 +31,22 @@ const Flex = styled.div`
   margin: auto;
 `;
 
-export default function About() {
+export default function About({
+  setPath,
+}: {
+  setPath: (path: string) => void;
+}) {
+  const ref = useRef(null);
+  const intersection = useIntersection(ref, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1,
+  });
+
+  if (intersection && intersection.intersectionRatio >= 1) setPath("about");
   return (
-    <Wrapper id="about">
-      <ImageWrapper>
+    <Wrapper>
+      <ImageWrapper ref={ref} id="about">
         <ProfileImage />
       </ImageWrapper>
       <SectionTitle style={{ marginTop: -40 }}>Hello, I am Adeola</SectionTitle>

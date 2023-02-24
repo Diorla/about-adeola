@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
 import styled, { keyframes } from "styled-components";
-import MenuItem from "./menu-item";
+import MenuItem from "../layout/menu-item";
 
 const hide = keyframes`
   0% {
@@ -21,7 +21,7 @@ const show = keyframes`
 `;
 
 const StyledSidebar = styled.div`
-  position: absolute;
+  position: fixed;
   width: clamp(200px, 50%, 320px);
   min-height: 100vh;
   z-index: 1000;
@@ -47,9 +47,11 @@ const Hide = styled(StyledSidebar)`
 export default function Sidebar({
   toggleSidebar,
   showSidebar,
+  path,
 }: {
   toggleSidebar: () => void;
   showSidebar: boolean;
+  path: string;
 }) {
   const [isRevealed, setIsRevealed] = useState(false);
   if (showSidebar)
@@ -64,13 +66,56 @@ export default function Sidebar({
             size={36}
           />
         </div>
-        <MenuItem href="#about" active>
+        <MenuItem
+          href="#about"
+          active={path === "about"}
+          onClick={() => {
+            toggleSidebar();
+            setIsRevealed(true);
+          }}
+        >
           About
         </MenuItem>
-        <MenuItem href="#works">Works</MenuItem>
-        <MenuItem href="#services">Services</MenuItem>
-        <MenuItem href="#testimonial">Testimonial</MenuItem>
-        <MenuItem href="#contact">Contact</MenuItem>
+        <MenuItem
+          href="#works"
+          active={path === "works"}
+          onClick={() => {
+            toggleSidebar();
+            setIsRevealed(true);
+          }}
+        >
+          Works
+        </MenuItem>
+        <MenuItem
+          href="#services"
+          active={path === "services"}
+          onClick={() => {
+            toggleSidebar();
+            setIsRevealed(true);
+          }}
+        >
+          Services
+        </MenuItem>
+        <MenuItem
+          href="#testimonial"
+          active={path === "testimonial"}
+          onClick={() => {
+            toggleSidebar();
+            setIsRevealed(true);
+          }}
+        >
+          Testimonial
+        </MenuItem>
+        <MenuItem
+          href="#contact"
+          active={path === "contact"}
+          onClick={() => {
+            toggleSidebar();
+            setIsRevealed(true);
+          }}
+        >
+          Contact
+        </MenuItem>
       </Show>
     );
   if (isRevealed)
