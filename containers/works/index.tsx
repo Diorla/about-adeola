@@ -2,7 +2,8 @@ import SectionTitle from "components/SectionTitle";
 import { useRef } from "react";
 import { useIntersection } from "react-use";
 import styled from "styled-components";
-import Work from "./Work";
+import Work from "../../components/Work";
+import { WorkProps } from "../../interfaces/WorkProps";
 
 const Wrapper = styled.div`
   clip-path: polygon(
@@ -31,8 +32,10 @@ const Subtitle = styled.div`
 
 export default function Works({
   setPath,
+  works,
 }: {
   setPath: (path: string) => void;
+  works: WorkProps[];
 }) {
   const ref = useRef(null);
   const intersection = useIntersection(ref, {
@@ -42,10 +45,7 @@ export default function Works({
   });
 
   if (intersection && intersection.intersectionRatio >= 1) setPath("works");
-  console.log(
-    "intersection && intersection.intersectionRatio >= 1",
-    intersection && intersection.intersectionRatio
-  );
+
   return (
     <Wrapper>
       <div style={{ height: 70 }} />
@@ -53,11 +53,9 @@ export default function Works({
         My works
       </SectionTitle>
       <Subtitle>Some of my recent work</Subtitle>
-      <Work />
-      <Work />
-      <Work />
-      <Work />
-      <Work />
+      {works.map((item, idx) => (
+        <Work work={item} key={idx} />
+      ))}
       <div style={{ height: 35 }} />
     </Wrapper>
   );

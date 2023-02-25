@@ -8,6 +8,7 @@ const Wrapper = styled.div`
 
 const StyledLink = styled.a`
   color: ${({ theme }) => theme.color.primaryLight};
+  margin: auto 4px;
 `;
 
 const Line = styled.div`

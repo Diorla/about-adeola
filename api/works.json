@@ -1,95 +1,70 @@
 [
   {
-    "name": "Quotiday",
-    "link": "quotiday",
-    "img": "/images/gamitask.png",
-    "description": "The quickest way to get things done",
-    "website": true,
-    "pc": true,
-    "mobile": true
-  },
-  {
-    "name": "Hera",
-    "link": "hera",
-    "img": "/images/hera.svg",
-    "description": "Spa and massage demo website",
-    "website": true
-  },
-  {
-    "name": "Character generator",
-    "link": "character_generator",
-    "img": "/images/chargen.svg",
-    "description": "Generates random attributes for fictional characters",
-    "mobile": true
-  },
-  {
-    "name": "Weblink",
-    "link": "weblink",
-    "img": "/images/linker.svg",
-    "description": "Cross browser, cross platform web bookmarking",
-    "website": true
-  },
-  {
-    "name": "Leadership",
-    "link": "leadership",
-    "img": "/images/leadership.jpeg",
-    "description": "Leadership and management tools",
-    "website": true
+    "name": "Bookmarker",
+    "icons": [
+      "firebase",
+      "react",
+      "styled-components",
+      "typescript",
+      "chrome",
+      "firefox"
+    ],
+    "description": "Cross browser bookmarks, available in Chromium based devices as well as Firefox (https://addons.mozilla.org/en-US/firefox/addon/multimark/) and safari",
+    "img": "/works/bookmarker.jpg",
+    "source": "https://github.com/Diorla/bookmarker-chrome",
+    "link": "https://chrome.google.com/webstore/detail/bookmarker/akbpnbpmfmelpdpiepfmjdemfkeamhcf"
   },
   {
     "name": "Image converter",
-    "link": "image_converter",
-    "img": "/images/image-converter.jpeg",
-    "description": "Convert and resize images",
-    "website": true
+    "icons": [
+      "react",
+      "typescript",
+      "css"
+    ],
+    "description": "Can be used to change images from one type to another. It also support resizing and reducing the image quality",
+    "img": "/works/image-converter.png",
+    "source": "https://github.com/Diorla/image-converter",
+    "link": "https://image-converter.adeolaade.com/"
   },
   {
-    "name": "App icons",
-    "link": "app_icons",
-    "img": "/images/app-icons.jpg",
-    "description": "Mobile theme app icons",
-    "mobile": true
+    "name": "BUI",
+    "icons": [
+      "react",
+      "styled-components",
+      "typescript"
+    ],
+    "description": "Neumorphic UI components designed for bookmarker chrome extension",
+    "img": "/works/bui.jpg",
+    "source": "https://github.com/Diorla/bookmarker-ui",
+    "link": "https://bookmarker-ui.adeolaade.com/?path=/story/avatar--default"
   },
   {
-    "name": "Social app",
-    "link": "social_app",
-    "img": "/images/profile.jpg",
-    "description": "User profile page in a mobile app",
-    "mobile": true
+    "name": "Quotiday",
+    "icons": [
+      "react",
+      "jss",
+      "mui",
+      "firebase",
+      "typescript",
+      "next"
+    ],
+    "description": "A task manager for breaking my tasks into small chunks: 'The quickest way to get things done.'",
+    "img": "/works/quotiday.jpg",
+    "source": "https://github.com/Diorla/quotiweb",
+    "link": "https://quotiday-git-dev-diorla.vercel.app/"
   },
   {
-    "name": "E-commerce app",
-    "link": "e_commerce_app",
-    "img": "/images/checkout.jpg",
-    "description": "Checkout page in a mobile app",
-    "mobile": true
-  },
-  {
-    "name": "Mortgage calculator",
-    "link": "mortgage_calculator",
-    "img": "/images/mortgage-calculator.jpg",
-    "description": "Calculate monthly payment",
-    "mobile": true
-  },
-  {
-    "name": "Digit-all",
-    "link": "digit_all",
-    "img": "/images/digit-all.jpeg",
-    "description": "All your electronics here",
-    "website": true
-  },
-  {
-    "name": "Puzzle",
-    "link": "puzzle",
-    "img": "/images/puzzle.jpeg",
-    "description": "Solve the puzzle in record time",
-    "website": true
-  },
-  {
-    "name": "Calculator",
-    "link": "calculator",
-    "img": "/images/calculator.jpeg",
-    "description": "Calculator with multiple themes",
-    "website": true
+    "name": "Stack select",
+    "icons": [
+      "next",
+      "typescript",
+      "firebase",
+      "styled-components",
+      "atlaskit"
+    ],
+    "description": "For organising projects, keeping track of different tech stack and deciding which ones to use.",
+    "img": "/works/stack-select.jpg",
+    "source": "https://github.com/Diorla/stack-select",
+    "link": "https://stackselect.vercel.app/"
   }
 ]

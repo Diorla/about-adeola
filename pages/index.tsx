@@ -11,7 +11,12 @@ import Footer from "containers/footer";
 import { useState } from "react";
 import Sidebar from "containers/sidebar";
 
-export default function Home() {
+import { GetStaticProps } from "next";
+import path from "path";
+import fs from "fs";
+import { WorkProps } from "interfaces/WorkProps";
+
+export default function Home({ works }: { works: WorkProps[] }) {
   const [showSidebar, setShowSidebar] = useState(false);
   const [path, setPath] = useState("");
 
@@ -20,7 +25,7 @@ export default function Home() {
       <NavBar toggleSidebar={() => setShowSidebar(!showSidebar)} path={path} />
       <LandingPage setPath={setPath} />
       <About setPath={setPath} />
-      <Works setPath={setPath} />
+      <Works setPath={setPath} works={works} />
       <Services setPath={setPath} />
       <Testimonials setPath={setPath} />
       <GetQuote />
@@ -37,3 +42,15 @@ export default function Home() {
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const res = path.join(process.cwd(), "api/works.json");
+  const result = fs.readFileSync(res, "utf8");
+  const works: WorkProps[] = JSON.parse(result);
+
+  return {
+    props: {
+      works,
+    },
+  };
+};

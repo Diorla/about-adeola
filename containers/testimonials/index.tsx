@@ -1,6 +1,7 @@
 import SectionTitle from "components/SectionTitle";
 import { useRef, useState } from "react";
 import { useBoolean, useIntersection, useInterval } from "react-use";
+import truncateText from "scripts/truncate-text";
 import styled from "styled-components";
 
 const Main = styled.main`
@@ -15,6 +16,7 @@ const Main = styled.main`
   transition: background 0.4s ease-in;
   background-color: #c394f8;
   flex-direction: column;
+  background-image: url(/questions.png);
 `;
 
 type Position = "before" | "current" | "after";
@@ -205,7 +207,7 @@ export default function Testimonials({
 
   return (
     <Main>
-      <SectionTitle ref={ref} id="testimonial">
+      <SectionTitle ref={ref} id="testimonial" style={{ color: "white" }}>
         Testimonials
       </SectionTitle>
       <Container>
@@ -220,7 +222,9 @@ export default function Testimonials({
               onMouseEnter={() => setIsRunning(false)}
               onMouseLeave={() => setIsRunning(true)}
             >
-              <CardQuote>{item.description}</CardQuote>
+              <CardQuote title={item.description}>
+                {truncateText(item.description, 120)}
+              </CardQuote>
               <Image src={item.src} alt="song" />
               <div style={{ textAlign: "center" }}>
                 <CardTitle>{item.name}</CardTitle>
