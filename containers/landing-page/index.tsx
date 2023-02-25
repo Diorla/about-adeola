@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useIntersection } from "react-use";
 import styled, { keyframes } from "styled-components";
 const backgroundShift = keyframes`
@@ -27,6 +27,8 @@ const StyledLanding = styled.div`
   animation: ${backgroundShift} 20s linear 0s infinite forwards;
   background-repeat: repeat-x;
   background-size: 200% 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: color;
 `;
 
 const Title = styled.h1`
@@ -42,8 +44,7 @@ const Subtitle = styled.div`
 const CTA = styled.div`
   color: white;
   text-shadow: 0 0 black;
-  margin-bottom: 10%;
-  background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 25%;
 `;
 
 export default function LandingPage({

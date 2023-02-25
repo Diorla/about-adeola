@@ -9,7 +9,6 @@ import {
   SiJavascript,
   SiReact,
   SiTypescript,
-  SiWire,
   SiElectron,
   SiMaterialui,
   SiAntdesign,
@@ -25,11 +24,12 @@ import {
   SiStyledcomponents,
   SiFramer,
   SiTestinglibrary,
+  SiAwsamplify,
 } from "react-icons/si";
 import styled from "styled-components";
 import Icon from "./Icon";
 
-const Wrapper = styled.div`
+const ToolsWrapper = styled.div`
   display: flex;
   flex: 1;
   padding: 4px;
@@ -41,21 +41,21 @@ const Wrapper = styled.div`
 `;
 
 const Tools = () => (
-  <Wrapper>
+  <ToolsWrapper>
     <Icon color="#e65327">
       <SiHtml5 />
     </Icon>
     <Icon color="#498bda">
       <SiCss3 />
     </Icon>
-    <Icon color="#ffcb2c">
-      <SiFirebase />
-    </Icon>
     <Icon color="#f0db4f">
       <SiJavascript />
     </Icon>
     <Icon color="#0074c1">
       <SiTypescript />
+    </Icon>
+    <Icon color="#ffcb2c">
+      <SiFirebase />
     </Icon>
     <Icon color="#4a96ab">
       <SiReact />
@@ -120,7 +120,10 @@ const Tools = () => (
     <Icon color="#f33f3e">
       <SiTestinglibrary />
     </Icon>
-  </Wrapper>
+    <Icon color="#ea8c1f">
+      <SiAwsamplify />
+    </Icon>
+  </ToolsWrapper>
 );
 
 export default Tools;

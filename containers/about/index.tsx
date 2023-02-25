@@ -1,35 +1,11 @@
 import SectionTitle from "components/SectionTitle";
 import { useRef } from "react";
 import { useIntersection } from "react-use";
-import styled from "styled-components";
+import Flex from "./Flex";
+import ImageWrapper from "./ImageWrapper";
+import ProfileImage from "./ProfileImage";
 import Tools from "./tools";
-
-const ProfileImage = styled.div`
-  background-image: url(/profile.jpeg);
-  width: 200px;
-  height: 400px;
-  background-size: 250%;
-  border-radius: 50%;
-  transform: rotate(45deg);
-  background-position: 50%;
-`;
-
-const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const Flex = styled.div`
-  display: flex;
-  flex: 1;
-  max-width: 640px;
-  margin: auto;
-`;
+import { Wrapper } from "./Wrapper";
 
 export default function About({
   setPath,
@@ -55,7 +31,9 @@ export default function About({
         <div>
           I enjoy programming and creating things for the web or mobile devices.
         </div>
-        <div>I'm committed to creating great experience through my work.</div>
+        <div>
+          I&apos;m committed to creating great experience through my work.
+        </div>
       </div>
       <Flex>
         <Tools />
