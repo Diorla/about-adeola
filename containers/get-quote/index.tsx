@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -29,7 +30,9 @@ export default function GetQuote() {
   return (
     <Wrapper>
       <Text>Interested?</Text>
-      <Button>Get a quote</Button>
+      <Link href="/quote">
+        <Button>Get a quote</Button>
+      </Link>
     </Wrapper>
   );
 }

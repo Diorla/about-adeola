@@ -52,7 +52,7 @@ export default function Works({
       <SectionTitle ref={ref} id="works">
         My works
       </SectionTitle>
-      <Subtitle>Some of my recent work</Subtitle>
+      <Subtitle>Some of my personal projects</Subtitle>
       {works.map((item, idx) => (
         <Work work={item} key={idx} />
       ))}

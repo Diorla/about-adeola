@@ -5,4 +5,6 @@ export default styled.section`
   padding: 8px;
   display: flex;
   flex-direction: column;
+  max-width: clamp(240px, 80%, 560px);
+  margin: auto;
 `;
