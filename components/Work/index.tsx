@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useWindowSize } from "react-use";
 import { WorkProps } from "../../interfaces/WorkProps";
 import Button from "./Button";
@@ -13,9 +14,17 @@ export default function Work({ work }: { work: WorkProps }) {
   const { width } = useWindowSize();
   return (
     <Wrapper>
-      <StyledImage column={width < 640} src={work.img} />
+      <Link href={`/project/${work.name}`}>
+        <StyledImage column={width < 640} src={work.img} />
+      </Link>
       <Description column={width < 640}>
-        <Title>{work.name}</Title>
+        <div
+          style={{ display: "flex", alignItems: "flex-start", marginBottom: 8 }}
+        >
+          <Link href={`/project/${work.name}`}>
+            <Title>{work.name}</Title>
+          </Link>
+        </div>
         <Icons>
           {work.icons.map((item, idx) => (
             <IconRenderer key={idx} icon={item} />

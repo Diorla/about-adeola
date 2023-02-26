@@ -1,42 +1,8 @@
 import SectionTitle from "components/SectionTitle";
 import { useRef } from "react";
 import { useIntersection } from "react-use";
-import styled from "styled-components";
-
-const Row = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-`;
-
-const ItemTitle = styled.div`
-  font-size: ${({ theme }) => theme.font.headerThree};
-`;
-
-const StyledItem = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: 16px;
-`;
-
-const Item = ({
-  src,
-  title,
-  children,
-}: {
-  src: string;
-  title: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <StyledItem>
-      <img src={src} alt={title} />
-      <ItemTitle>{title}</ItemTitle>
-      <ul>{children}</ul>
-    </StyledItem>
-  );
-};
+import Item from "./Item";
+import Row from "./Row";
 
 export default function Services({
   setPath,
