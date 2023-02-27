@@ -22,4 +22,6 @@ export default styled.div`
   background-position: center;
   padding-top: 16px;
   padding-bottom: 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
 `;

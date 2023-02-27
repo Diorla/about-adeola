@@ -15,19 +15,25 @@ import { GetStaticProps } from "next";
 import path from "path";
 import fs from "fs";
 import { WorkProps } from "interfaces/WorkProps";
+import { useWindowScroll } from "react-use";
 
 export default function Home({ works }: { works: WorkProps[] }) {
   const [showSidebar, setShowSidebar] = useState(false);
   const [path, setPath] = useState("");
+  const { y } = useWindowScroll();
 
   return (
     <Layout>
-      <NavBar toggleSidebar={() => setShowSidebar(!showSidebar)} path={path} />
+      <NavBar
+        toggleSidebar={() => setShowSidebar(!showSidebar)}
+        path={path}
+        offset={y > 50}
+      />
       <LandingPage setPath={setPath} />
       <About setPath={setPath} />
       <Works setPath={setPath} works={works} />
       <Services setPath={setPath} />
-      <Testimonials setPath={setPath} />
+      <Testimonials setPath={setPath} path={path} />
       <GetQuote />
       <Contact setPath={setPath} />
       <Footer />

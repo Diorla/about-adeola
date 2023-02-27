@@ -38,6 +38,7 @@
     "max-lines": [
       "warn",
       200
-    ]
+    ],
+    "no-console": "warn"
   }
 }

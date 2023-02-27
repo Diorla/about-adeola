@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export default styled.div<{ src: string; column: boolean }>`
+export default styled.div<{ $src: string; column: boolean }>`
   height: 300px;
   min-width: 300px;
   border-radius: 50%;
-  background-image: url(${({ src }) => src});
+  background-image: url(${({ $src }) => $src});
   margin-right: 16px;
   background-color: black;
   background-blend-mode: luminosity;
@@ -18,3 +18,15 @@ export default styled.div<{ src: string; column: boolean }>`
     box-shadow: 0 0 4px black;
   }
 `;
+
+// Aiden Pierce -
+
+// Eunice Pardo -
+
+// Kyle Vettori -
+
+// Esther Manning -
+
+// Leila Bini
+
+// Lucile Caruso

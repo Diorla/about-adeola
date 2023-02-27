@@ -41,6 +41,7 @@ export default function Form() {
       onSubmit={(e) => submitForm(e, setStatus, form)}
       action="https://formspree.io/f/mqkglvzz"
       method="POST"
+      style={{ marginBottom: 20 }}
     >
       <Row>
         <Section>

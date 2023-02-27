@@ -22,7 +22,7 @@ export default function Contact({
   return (
     <Gradient>
       <Wrapper>
-        <SectionTitle ref={ref} id="contact">
+        <SectionTitle ref={ref} id="contact" style={{ marginTop: 40 }}>
           <BorderBottom>Want to get in </BorderBottom>
           <span style={{ fontFamily: "cursive", fontStyle: "italic" }}>
             touch

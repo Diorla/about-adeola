@@ -15,7 +15,7 @@ export default function Work({ work }: { work: WorkProps }) {
   return (
     <Wrapper>
       <Link href={`/project/${work.name}`}>
-        <StyledImage column={width < 640} src={work.img} />
+        <StyledImage column={width < 640} $src={work.img} />
       </Link>
       <Description column={width < 640}>
         <div
