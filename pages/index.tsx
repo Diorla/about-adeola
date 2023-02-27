@@ -4,7 +4,7 @@ import About from "containers/about";
 import NavBar from "containers/nav-bar";
 import Works from "containers/works";
 import Services from "containers/services";
-import Testimonials from "containers/testimonials";
+import Testimonial from "containers/testimonial";
 import GetQuote from "containers/get-quote";
 import Contact from "containers/contact";
 import Footer from "containers/footer";
@@ -33,7 +33,7 @@ export default function Home({ works }: { works: WorkProps[] }) {
       <About setPath={setPath} />
       <Works setPath={setPath} works={works} />
       <Services setPath={setPath} />
-      <Testimonials setPath={setPath} path={path} />
+      <Testimonial setPath={setPath} path={path} />
       <GetQuote />
       <Contact setPath={setPath} />
       <Footer />

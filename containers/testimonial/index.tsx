@@ -1,6 +1,11 @@
 import SectionTitle from "components/SectionTitle";
 import { useRef, useState } from "react";
-import { useBoolean, useIntersection, useInterval } from "react-use";
+import {
+  useBoolean,
+  useIntersection,
+  useInterval,
+  useWindowSize,
+} from "react-use";
 import truncateText from "scripts/truncate-text";
 import Card from "./Card";
 import CardQuote from "./CardQuote";
@@ -9,6 +14,7 @@ import Cards from "./Cards";
 import CardTitle from "./CardTitle";
 import Container from "./Container";
 import getPosition from "./getPosition";
+import getSize from "./getSize";
 import Image from "./Image";
 import imageList from "./imageList";
 import Main from "./Main";
@@ -20,6 +26,7 @@ export default function Testimonials({
   setPath: (path: string) => void;
   path: string;
 }) {
+  const { width } = useWindowSize();
   const ref = useRef(null);
   const intersection = useIntersection(ref, {
     root: null,
@@ -79,7 +86,7 @@ export default function Testimonials({
               onMouseLeave={() => setIsRunning(true)}
             >
               <CardQuote title={item.description}>
-                {truncateText(item.description, 1000)}
+                {truncateText(item.description, getSize(width))}
               </CardQuote>
               <Image src={item.src} alt={item.name} />
               <div style={{ textAlign: "center" }}>
