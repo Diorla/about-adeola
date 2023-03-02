@@ -23,7 +23,7 @@ export default function LandingPage({
       <div ref={ref}></div>
       <CTA>
         <Title>Web developer</Title>
-        <Subtitle>Design, Developer, Create something beautiful</Subtitle>
+        <Subtitle>Design, Develop, Create something beautiful</Subtitle>
       </CTA>
     </StyledLanding>
   );
