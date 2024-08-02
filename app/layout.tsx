@@ -4,26 +4,27 @@ import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
+const description =
+  "I am a web designer and developer based in London. I enjoy programming and creating things for the web or mobile devices. I'm committed to creating great experience through my work.";
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "Adeola Ade",
+    template: "%s | adeolaade.com",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description,
   openGraph: {
-    title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: "Adeola Adedotun",
+    description,
+    url: "https://adeolaade.com",
+    siteName: "adeolaade.com",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://adeolaade.com/og.png",
         width: 1920,
         height: 1080,
       },
     ],
-    locale: "en-US",
+    locale: "en-GB",
     type: "website",
   },
   robots: {
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "adeola",
     card: "summary_large_image",
   },
   icons: {
@@ -66,8 +67,9 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+        className={`bg-black ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
         {children}
       </body>
