@@ -1,11 +1,5 @@
 import Particles from "~/components/particles";
-
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-  { name: "Blogs", href: "/blog" },
-];
+import { navigation } from "~/constants/navigation";
 
 export default function Home() {
   return (

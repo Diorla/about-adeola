@@ -1,8 +1,10 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
+
   theme: {
     extend: {
       backgroundSize: {

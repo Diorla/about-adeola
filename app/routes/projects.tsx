@@ -1,50 +1,17 @@
 import Particles from "~/components/particles";
-import { projectList } from "~/constants/projectList";
+import Card from "~/components/Card";
+import getProjects from "~/util/getProjects";
+import { useLoaderData } from "@remix-run/react";
+import Project from "~/types/Project";
+import { navigation } from "~/constants/navigation";
 
-const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-  { name: "Blogs", href: "/blog" },
-];
-
-const Card = ({
-  title,
-  description,
-  path,
-  img,
-}: {
-  title: string;
-  description: string;
-  path: string;
-  img: string;
-}) => {
-  return (
-    <div className="w-64 h-64 bg-zinc-800 rounded-lg shadow-lg m-4">
-      <div className="bg-zinc-700 bg-hero-pattern bg-cover">
-        <img
-          src={`./app/public/${img}`}
-          alt={title + " logo"}
-          className="w-28 h-28 rounded-t-lg bg-center bg-75% bg-no-repeat m-auto"
-        />
-      </div>
-      <div className="p-4">
-        <h3 className="text-xl font-bold text-white">{title}</h3>
-        <p className="text-zinc-400">{description}</p>
-        <p className="flex  justify-end">
-          <a
-            href={`./project/${path}`}
-            className="text-zinc-300 hover:underline item-right"
-          >
-            Open
-          </a>
-        </p>
-      </div>
-    </div>
-  );
+export const loader = async () => {
+  const projects = getProjects();
+  return projects;
 };
 
 export default function Projects() {
+  const projects = useLoaderData<Project[]>();
   return (
     <div className="flex flex-col items-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
       <nav className="my-2 animate-fade-in">
@@ -66,8 +33,8 @@ export default function Projects() {
         quantity={1000}
       />
       <div className="flex flex-wrap justify-evenly overflow-y-scroll mb-10 w-screen min-h-screen">
-        {projectList.map((item, idx) => (
-          <Card key={idx} {...item} />
+        {projects.map((item, idx) => (
+          <Card key={idx} {...item.metadata} slug={item.slug} />
         ))}
       </div>
 
