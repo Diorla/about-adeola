@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    shortcut: "./favicon.png",
+    shortcut: "./public/favicon.png",
   },
 };
 const inter = Inter({
@@ -51,7 +51,7 @@ const inter = Inter({
 });
 
 const calSans = LocalFont({
-  src: "./public/fonts/CalSans-SemiBold.ttf",
+  src: "../public/fonts/CalSans-SemiBold.ttf",
   variable: "--font-calsans",
 });
 
@@ -62,7 +62,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-      <head>{/* <Analytics /> */}</head>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`bg-black ${
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
