@@ -1,13 +1,8 @@
+import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/app/**/*.{js,ts,jsx,tsx}",
-    // "./mdx-components.tsx",
-    // "content/**/*.mdx",
-  ],
-
+export default {
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       backgroundSize: {
@@ -40,6 +35,7 @@ module.exports = {
         "gradient-radial":
           "radial-gradient(50% 50% at 50% 50%, var(--tw-gradient-stops))",
         "focus-forge": "url('./public/focus-forge.png')",
+        "hero-pattern": "url('./public/hero-pattern.svg')",
       },
       animation: {
         "fade-in": "fade-in 3s ease-in-out forwards",
@@ -109,8 +105,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    // require("tailwindcss-debug-screens"),
-  ],
-};
+  plugins: [require("@tailwindcss/typography")],
+} satisfies Config;
