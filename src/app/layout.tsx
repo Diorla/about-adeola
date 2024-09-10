@@ -1,7 +1,14 @@
-import { Inter } from "next/font/google";
-import LocalFont from "next/font/local";
+import { Inknut_Antiqua } from "next/font/google";
 import { Metadata } from "next";
 import "./globals.css";
+import Image from "next/image";
+
+const inknut = Inknut_Antiqua({
+  weight: ["400", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const description =
   "I am a web designer and developer based in London. I enjoy programming and creating things for the web or mobile devices. I'm committed to creating great experience through my work.";
@@ -42,18 +49,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    shortcut: "./public/favicon.png",
+    shortcut: "/favicon.png",
   },
 };
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
-  variable: "--font-calsans",
-});
 
 export default function RootLayout({
   children,
@@ -61,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" className={inknut.className}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -69,17 +67,20 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
       </head>
       <body
         className={`bg-black ${
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
         }`}
       >
-        {children}
+        <Image
+          src="/moon.gif"
+          alt=""
+          className="absolute inset-0 z-0 h-10 w-10 right-10 top-10 opacity-30"
+          width={40}
+          height={40}
+        />
+        <div className="z-1">{children}</div>
       </body>
     </html>
   );
