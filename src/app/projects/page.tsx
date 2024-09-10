@@ -1,7 +1,7 @@
 import Particles from "@/components/particles";
 import Link from "next/link";
 import React from "react";
-import BlogPosts from "./BlogPosts";
+import ProjectsRender from "./ProjectsRender";
 import { navigation } from "@/navigation";
 
 export default function Projects() {
@@ -26,7 +26,7 @@ export default function Projects() {
         quantity={1000}
       />
       <div className="flex flex-wrap justify-evenly overflow-y-scroll mb-10 w-screen min-h-screen">
-        <BlogPosts />
+        <ProjectsRender />
       </div>
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />

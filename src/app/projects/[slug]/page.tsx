@@ -1,22 +1,22 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "@/components/CustomMDX";
-import { getBlogPosts } from "@/app/projects/utils";
+import { getProjects } from "@/app/projects/utils";
 import { baseUrl } from "@/app/sitemap";
 import Link from "next/link";
 import Particles from "@/components/particles";
 import { navigation } from "@/navigation";
 
 export async function generateStaticParams() {
-  const posts = getBlogPosts();
+  const projects = getProjects();
 
-  return posts.map((post) => ({
-    slug: post.slug,
+  return projects.map((project) => ({
+    slug: project.slug,
   }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getBlogPosts().find((post) => post.slug === params.slug);
-  if (!post) {
+  const project = getProjects().find((project) => project.slug === params.slug);
+  if (!project) {
     return;
   }
 
@@ -25,7 +25,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
     publishedAt: publishedTime,
     description,
     image,
-  } = post.metadata;
+  } = project.metadata;
   const ogImage = image
     ? image
     : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
@@ -38,7 +38,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       description,
       type: "article",
       publishedTime,
-      url: `${baseUrl}/blog/${post.slug}`,
+      url: `${baseUrl}/projects/${project.slug}`,
       images: [
         {
           url: ogImage,
@@ -54,10 +54,10 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function Blog({ params }: { params: { slug: string } }) {
-  const post = getBlogPosts().find((post) => post.slug === params.slug);
+export default function Project({ params }: { params: { slug: string } }) {
+  const project = getProjects().find((project) => project.slug === params.slug);
 
-  if (!post) {
+  if (!project) {
     notFound();
   }
 
@@ -89,15 +89,15 @@ export default function Blog({ params }: { params: { slug: string } }) {
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "BlogPosting",
-                headline: post.metadata.title,
-                datePublished: post.metadata.publishedAt,
-                dateModified: post.metadata.publishedAt,
-                description: post.metadata.description,
-                image: post.metadata.image
-                  ? `${baseUrl}${post.metadata.image}`
-                  : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-                url: `${baseUrl}/blog/${post.slug}`,
+                "@type": "projectsprojecting",
+                headline: project.metadata.title,
+                datePublished: project.metadata.publishedAt,
+                dateModified: project.metadata.publishedAt,
+                description: project.metadata.description,
+                image: project.metadata.image
+                  ? `${baseUrl}${project.metadata.image}`
+                  : `/og?title=${encodeURIComponent(project.metadata.title)}`,
+                url: `${baseUrl}/projects/${project.slug}`,
                 author: {
                   "@type": "Person",
                   name: "My Portfolio",
@@ -106,11 +106,11 @@ export default function Blog({ params }: { params: { slug: string } }) {
             }}
           />
           <h1 className="title font-semibold text-2xl tracking-tighter text-zinc-100 text-center">
-            {post.metadata.title}
+            {project.metadata.title}
           </h1>
 
           <article className="prose m-4 text-zinc-300 mb-20">
-            <CustomMDX source={post.content} />
+            <CustomMDX source={project.content} />
           </article>
         </section>
       </div>

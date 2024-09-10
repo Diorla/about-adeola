@@ -1,12 +1,12 @@
-import { getBlogPosts } from "@/app/projects/utils";
+import { getProjects } from "@/app/projects/utils";
 import ProjectCard from "./ProjectCard";
 
-export default function BlogPosts() {
-  const allBlogs = getBlogPosts();
+export default function ProjectsRender() {
+  const projects = getProjects();
 
   return (
     <div>
-      {allBlogs
+      {projects
         .sort((a, b) => {
           if (
             new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
