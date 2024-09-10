@@ -76,7 +76,7 @@ export default function RootLayout({
         <Image
           src="/moon.gif"
           alt=""
-          className="absolute inset-0 z-0 h-10 w-10 right-10 top-10 opacity-30"
+          className="absolute inset-0 z-0 h-10 w-10 right-10 top-10 opacity-30 rotate-earth rounded-full"
           width={40}
           height={40}
         />

@@ -4,6 +4,9 @@ module.exports = {
 
   theme: {
     extend: {
+      rotate: {
+        earth: "23.5deg",
+      },
       backgroundSize: {
         "75%": "75%",
         "16": "4rem",
