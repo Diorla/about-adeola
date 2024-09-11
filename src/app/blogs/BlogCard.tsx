@@ -10,7 +10,6 @@ export default function BlogCard({
   reading_time_minutes,
   comments_count,
 }: Post) {
-  console.log("cover_image", cover_image);
   return (
     <a
       href={canonical_url}
@@ -19,7 +18,7 @@ export default function BlogCard({
     >
       <div className="w-128 bg-zinc-800 rounded-lg shadow-lg m-4">
         <div
-          className="bg-zinc-700 bg-cover h-64"
+          className="bg-zinc-700 bg-cover h-64 bg-center"
           style={{
             backgroundImage: `url(${cover_image || "/hero-pattern.svg"})`,
           }}
