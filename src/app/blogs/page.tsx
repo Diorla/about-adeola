@@ -1,9 +1,8 @@
 import Particles from "@/components/particles";
-import Link from "next/link";
 import React from "react";
 import { Post } from "./Post";
 import BlogCard from "./BlogCard";
-import { navigation } from "@/navigation";
+import Navigation from "@/components/nav";
 
 export default async function Blogs() {
   const data = await fetch("https://dev.to/api/articles/me", {
@@ -15,19 +14,7 @@ export default async function Blogs() {
 
   return (
     <div className="flex flex-col items-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      <nav className="my-2 animate-fade-in">
-        <ul className="flex items-center justify-center gap-4">
-          {navigation.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </ul>
-      </nav>
+      <Navigation />
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <Particles
         className="absolute inset-0 -z-10 animate-fade-in"
