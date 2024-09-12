@@ -38,6 +38,7 @@ module.exports = {
         title: "title 3s ease-out forwards",
         "fade-left": "fade-left 3s ease-in-out forwards",
         "fade-right": "fade-right 3s ease-in-out forwards",
+        "scroll-by": "scroll-by 7s ease-in-out forwards",
       },
       keyframes: {
         "fade-in": {
@@ -70,12 +71,29 @@ module.exports = {
             transform: "translateX(-100%)",
             opacity: "0%",
           },
-
           "30%": {
             transform: "translateX(0%)",
             opacity: "100%",
           },
           "100%": {
+            opacity: "0%",
+          },
+        },
+        "scroll-by": {
+          "0%": {
+            transform: "translateX(100%)",
+            opacity: "0%",
+          },
+          "20%": {
+            transform: "translateX(0%)",
+            opacity: "100%",
+          },
+          "80%": {
+            transform: "translateX(0%)",
+            opacity: "100%",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
             opacity: "0%",
           },
         },
