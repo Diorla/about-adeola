@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect, useCallback } from "react";
+import React, { useRef, useEffect, useCallback, useState } from "react";
 import { useMousePosition } from "@/util/mouse";
 
 interface ParticlesProps {
@@ -21,7 +21,7 @@ export default function Particles({
   ease = 50,
   refresh = false,
 }: ParticlesProps) {
-  const quantity = getParticleQuantity();
+  const [quantity, setQuantity] = useState(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
@@ -30,6 +30,10 @@ export default function Particles({
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
+
+  useEffect(() => {
+    setQuantity(getParticleQuantity());
+  }, []);
 
   const onMouseMove = useCallback(() => {
     if (canvasRef.current) {
