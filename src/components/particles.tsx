@@ -5,19 +5,23 @@ import { useMousePosition } from "@/util/mouse";
 
 interface ParticlesProps {
   className?: string;
-  quantity?: number;
   staticity?: number;
   ease?: number;
   refresh?: boolean;
 }
 
+function getParticleQuantity() {
+  const { availHeight, availWidth } = screen;
+  return Math.min(availHeight, availWidth) / 2;
+}
+
 export default function Particles({
   className = "",
-  quantity = 30,
   staticity = 50,
   ease = 50,
   refresh = false,
 }: ParticlesProps) {
+  const quantity = getParticleQuantity();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
