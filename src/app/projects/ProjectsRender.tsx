@@ -5,7 +5,7 @@ export default function ProjectsRender() {
   const projects = getProjects();
 
   return (
-    <div>
+    <div className="flex flex-wrap">
       {projects
         .sort((a, b) => {
           if (

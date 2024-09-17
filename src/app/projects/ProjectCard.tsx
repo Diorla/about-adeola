@@ -21,7 +21,7 @@ export default function Card({
       <div className="p-4">
         <h3 className="text-xl font-bold text-white">{title}</h3>
         <p className="text-zinc-400">{description}</p>
-        <p className="flex  justify-end">
+        <p className="flex justify-end">
           <a
             href={`./projects/${slug}`}
             className="text-zinc-300 hover:underline item-right"

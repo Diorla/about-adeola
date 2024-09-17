@@ -36,7 +36,14 @@ function CustomLink(props: { href: string; children: React.ReactNode }) {
     return <a {...props} />;
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-zinc-300 italic no-underline hover:underline mx-4"
+      {...props}
+    />
+  );
 }
 
 function RoundedImage(props: ImageProps) {
