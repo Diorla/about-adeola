@@ -16,7 +16,7 @@ export default function Navigation() {
           <Link
             key={item.href}
             href={item.href}
-            className="text-sm duration-500 text-zinc-400 hover:text-zinc-100"
+            className="text-sm duration-500 text-zinc-300 hover:text-zinc-100"
           >
             {item.name}
           </Link>
