@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Project Title
 
-First, run the development server:
+This is my personal website
+
+
+## Badges
+
+![TypeScript](https://img.shields.io/badge/Typescript-2F74C0?style=for-the-badge&logo=typescript&logoColor=black)
+![NextJS](https://img.shields.io/badge/Nextjs-20232A?style=for-the-badge&logo=next.js&logoColor=white)
+![ExpressJS](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express)
+![Figma](https://img.shields.io/badge/Figma-2c2c2c?style=for-the-badge&logo=figma&logoColor=white)
+![Git](https://img.shields.io/badge/Git-f14e32?&style=for-the-badge&logo=git&logoColor=white)
+![Github](https://img.shields.io/badge/Github-24292f?&style=for-the-badge&logo=github&logoColor=white)
+![Tailwindcss](https://img.shields.io/badge/Tailwind-38bdf8?&style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+## Color Reference
+![#020617](https://via.placeholder.com/100/020617?text=+)
+![#3f3f46](https://via.placeholder.com/100/3f3f46?text=+)
+![#71717a](https://via.placeholder.com/100/71717a?text=+)
+![#d4d4d8](https://via.placeholder.com/100/d4d4d8?text=+)
+![#f4f4f5](https://via.placeholder.com/100/f4f4f5?text=+)
+
+## Demo
+
+[Website](https://adeolaade.com/)
+
+
+## Feedback
+
+If you have any feedback, please reach out to me [here](https://adeolaade.com/contact)
+## Installation
+
+Install my-project with npm
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/Diorla/about-adeola
+  cd about-adeola
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Support
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For support, reach out to me [here](http://localhost:3000/contact)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Home](./public/about-adeola/home.png)
+![Projects](./public/about-adeola/projects.png)
+![Contact](./public/about-adeola/contact.png)
+![Blogs](./public/about-adeola/blogs.png)
+![Case study](./public/about-adeola/case_study.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Run Locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Clone the project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+  git clone https://link-to-project
+```
+
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+![Logo](./public/og.png)
+![Logo](./public/favicon.png)
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
