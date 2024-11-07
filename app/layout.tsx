@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import FAQ from "@/components/local/FAQ";
 import Header from "@/components/local/Header";
+import Posts from "@/components/local/Posts";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -106,59 +107,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <FAQ />
-        <section className="py-12 px-6">
-          <div className="">
-            <h2 className="text-2xl font-bold mb-6">Recent Posts</h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold">My Latest Project</h3>
-                  <p className="text-sm text-muted-foreground">
-                    A deep dive into my most recent web application...
-                  </p>
-                  <Link
-                    className="text-sm text-primary hover:underline mt-4 inline-block"
-                    href="/blog/latest-project"
-                  >
-                    Read more
-                  </Link>
-                </div>
-              </div>
-              <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold">
-                    The Future of Web Dev
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Exploring upcoming trends in web development...
-                  </p>
-                  <Link
-                    className="text-sm text-primary hover:underline mt-4 inline-block"
-                    href="/blog/future-of-web-dev"
-                  >
-                    Read more
-                  </Link>
-                </div>
-              </div>
-              <div className="rounded-lg border bg-card text-card-foreground shadow-sm">
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold">
-                    Optimizing React Apps
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    Tips and tricks for better React performance...
-                  </p>
-                  <Link
-                    className="text-sm text-primary hover:underline mt-4 inline-block"
-                    href="/blog/optimizing-react-apps"
-                  >
-                    Read more
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Posts />
 
         <section className="bg-primary text-primary-foreground py-12">
           <div className=" text-center">
