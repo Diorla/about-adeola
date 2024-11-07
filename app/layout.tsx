@@ -104,16 +104,8 @@ export default function RootLayout({
         className={`min-h-screen flex flex-col ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-
         <main className="flex-1">{children}</main>
-
-        <section className="bg-muted py-12 px-6">
-          <div className="">
-            <h2 className="text-2xl font-bold mb-6">FAQ</h2>
-            <FAQ />
-          </div>
-        </section>
-
+        <FAQ />
         <section className="py-12 px-6">
           <div className="">
             <h2 className="text-2xl font-bold mb-6">Recent Posts</h2>
