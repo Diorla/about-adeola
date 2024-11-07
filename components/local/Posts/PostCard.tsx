@@ -16,7 +16,8 @@ export default function PostCard({
         <p className="text-sm text-muted-foreground">{summary}</p>
         <Link
           className="text-sm text-primary hover:underline mt-4 inline-block"
-          href={`journal/${slug}`}
+          href={`https://dev.to/diorla/${slug}`}
+          target="_blank"
         >
           Read more
         </Link>
