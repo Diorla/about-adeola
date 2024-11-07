@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 export default function Home() {
   return (
     <main>
@@ -12,20 +13,10 @@ export default function Home() {
           </p>
         </div>
         <div className="flex-1 hidden sm:flex items-center justify-center">
-          <Image
-            src="/large-laptop.png"
-            alt="Laptop"
-            width={500}
-            height={500}
-          />
+          <Image src="/laptop.png" alt="Laptop" width={500} height={500} />
         </div>
         <div className="flex-1 sm:hidden flex items-center justify-center">
-          <Image
-            src="/small-laptop.png"
-            alt="Laptop"
-            width={500}
-            height={500}
-          />
+          <Image src="/tablet.png" alt="Laptop" width={500} height={500} />
         </div>
       </div>
     </main>
