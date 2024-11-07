@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import FAQ from "@/container/FAQ";
-import { Menu } from "lucide-react";
+import MobileMenu from "@/components/local/MobileMenu";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -161,11 +161,7 @@ export default function RootLayout({
                 <Link href="/contact">Contact</Link>
               </Button>
             </div>
-            <div className="sm:hidden flex">
-              <Button size="lg" asChild variant="ghost">
-                <Menu size={96} />
-              </Button>
-            </div>
+            <MobileMenu />
           </div>
         </header>
 
