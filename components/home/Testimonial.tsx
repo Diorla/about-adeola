@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import FadeInWhenVisible from "./FadeInWhenVisible";
 import { Card, CardContent } from "../ui/card";

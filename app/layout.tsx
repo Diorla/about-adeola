@@ -7,6 +7,7 @@ import FAQ from "@/components/local/FAQ";
 import Header from "@/components/local/Header";
 import Posts from "@/components/local/Posts";
 import Footer from "@/components/local/Footer";
+import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -110,22 +111,24 @@ export default function RootLayout({
         <FAQ />
         <Posts />
 
-        <section className="bg-primary text-primary-foreground py-12">
-          <div className=" text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-xl mb-6">
-              Let&apos;s work together to bring your vision to life. Let&apos;s.
-              build something amazing together. Ready to take your web presence
-              to the next level? Let&apos;s collaborate and create something
-              extraordinary.
-            </p>
-            <Button asChild variant="secondary">
-              <Link href="/contact">Get Started</Link>
-            </Button>
-          </div>
-        </section>
+        <FadeInWhenVisible>
+          <section className="bg-primary text-primary-foreground py-12">
+            <div className=" text-center">
+              <h2 className="text-3xl font-bold mb-4">
+                Ready to Start Your Project?
+              </h2>
+              <p className="text-xl mb-6">
+                Let&apos;s work together to bring your vision to life.
+                Let&apos;s. build something amazing together. Ready to take your
+                web presence to the next level? Let&apos;s collaborate and
+                create something extraordinary.
+              </p>
+              <Button asChild variant="secondary">
+                <Link href="/contact">Get Started</Link>
+              </Button>
+            </div>
+          </section>
+        </FadeInWhenVisible>
 
         <Footer />
       </body>
