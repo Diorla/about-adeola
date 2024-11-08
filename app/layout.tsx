@@ -113,11 +113,13 @@ export default function RootLayout({
         <section className="bg-primary text-primary-foreground py-12">
           <div className=" text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Let&apos;s build something amazing together
+              Ready to Start Your Project?
             </h2>
             <p className="text-xl mb-6">
-              Ready to take your web presence to the next level? Let&apos;s
-              collaborate and create something extraordinary.
+              Let&apos;s work together to bring your vision to life. Let&apos;s.
+              build something amazing together. Ready to take your web presence
+              to the next level? Let&apos;s collaborate and create something
+              extraordinary.
             </p>
             <Button asChild variant="secondary">
               <Link href="/contact">Get Started</Link>
