@@ -12,6 +12,39 @@ body {
   }
 }
 
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite forwards;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-left,
+  .animate-scroll-right {
+    animation: none;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
