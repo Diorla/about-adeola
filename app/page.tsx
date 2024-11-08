@@ -30,7 +30,7 @@ export default function Home() {
                 className="w-32 h-32 flex items-center justify-center bg-muted rounded-lg"
               >
                 <Image
-                  src="/me.jpeg"
+                  src="/people/me.jpeg"
                   alt={`Client Logo ${i}`}
                   width={100}
                   height={100}

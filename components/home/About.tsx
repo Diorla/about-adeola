@@ -14,7 +14,7 @@ export default function About() {
           <FadeInWhenVisible>
             <div className="md:w-1/2">
               <Image
-                src="/me.jpeg"
+                src="/people/me.jpeg"
                 alt="Adeola"
                 width={400}
                 height={400}

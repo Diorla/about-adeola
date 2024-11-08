@@ -6,21 +6,21 @@ const testimonial = [
   {
     name: "Omotayo Ibrahim",
     role: "Business owner, Hera beauty",
-    image: "/omotayo.jpg",
+    image: "/people/omotayo.jpg",
     testimony:
       "From the initial consultation to the final launch, Adeola was professional, attentive, and highly skilled.",
   },
   {
     name: "Aiden Pierce",
     role: "CTO, ARCO Incorporated",
-    image: "/aiden.jpg",
+    image: "/people/aiden.jpg",
     testimony:
       "Adeola demonstrated an understanding of web dev best practices and seamlessly translate our design ideas into a functional website.",
   },
   {
     name: "Elizabeth Olaniyan",
     role: "CEO, Novellus Solutions",
-    image: "/liz.jpg",
+    image: "/people/liz.jpg",
     testimony:
       "He were always responsive to our questions and concerns, made sure that our site was optimized for SEO and user experience.",
   },
