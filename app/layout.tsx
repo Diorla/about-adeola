@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   robots: "index, follow",
   alternates: {
-    canonical: "https://adeolaade.com/",
+    canonical: "/",
   },
   manifest: "/manifest.json",
   openGraph: {
@@ -91,6 +91,7 @@ export const metadata: Metadata = {
     capable: true,
   },
   classification: "Portfolio",
+  metadataBase: new URL("https://adeolaade.com"),
 };
 
 export default function RootLayout({
