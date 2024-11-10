@@ -112,24 +112,28 @@ export default function RootLayout({
         <FAQ />
         <Posts />
 
-        <FadeInWhenVisible>
-          <section className="bg-primary text-primary-foreground py-12">
-            <div className=" text-center">
+        <section className="bg-primary text-primary-foreground py-12">
+          <div className=" text-center">
+            <FadeInWhenVisible>
               <h2 className="text-3xl font-bold mb-4">
                 Ready to Start Your Project?
               </h2>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
               <p className="text-xl mb-6">
                 Let&apos;s work together to bring your vision to life.
                 Let&apos;s. build something amazing together. Ready to take your
                 web presence to the next level? Let&apos;s collaborate and
                 create something extraordinary.
               </p>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
               <Button asChild variant="secondary">
                 <Link href="/contact">Get Started</Link>
               </Button>
-            </div>
-          </section>
-        </FadeInWhenVisible>
+            </FadeInWhenVisible>
+          </div>
+        </section>
 
         <Footer />
       </body>

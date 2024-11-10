@@ -47,7 +47,13 @@ export default function Landing() {
         transition={{ delay: 0.2, duration: 1.6 }}
         className="flex-1 hidden sm:flex items-center justify-center"
       >
-        <Image src="/laptop.png" alt="Laptop" width={500} height={500} />
+        <Image
+          src="/laptop.png"
+          alt="Laptop"
+          width={500}
+          height={500}
+          priority
+        />
       </motion.div>
       <motion.div
         initial={{ scale: 0 }}

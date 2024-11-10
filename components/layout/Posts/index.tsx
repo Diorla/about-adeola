@@ -13,35 +13,37 @@ export default async function Posts() {
   const posts = (await data.json()) as Post[];
 
   return (
-    <FadeInWhenVisible>
-      <section className="py-12 px-6">
-        <div className="">
+    <section className="py-12 px-6">
+      <div className="">
+        <FadeInWhenVisible>
           <h2 className="text-2xl font-bold mb-6">Posts</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {posts
-              .slice(0, 3)
-              .sort((prevPost, nextPost) => {
-                return (
-                  nextPost.positive_reactions_count -
-                  prevPost.positive_reactions_count
-                );
-              })
-              .map((post) => (
-                <PostCard
-                  key={post.id}
-                  title={post.title}
-                  summary={post.description}
-                  slug={post.slug}
-                />
-              ))}
-          </div>
+        </FadeInWhenVisible>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {posts
+            .slice(0, 3)
+            .sort((prevPost, nextPost) => {
+              return (
+                nextPost.positive_reactions_count -
+                prevPost.positive_reactions_count
+              );
+            })
+            .map((post) => (
+              <PostCard
+                key={post.id}
+                title={post.title}
+                summary={post.description}
+                slug={post.slug}
+              />
+            ))}
+        </div>
+        <FadeInWhenVisible>
           <div className="text-center mt-12">
             <Button asChild>
               <Link href="/journal">View All</Link>
             </Button>
           </div>
-        </div>
-      </section>
-    </FadeInWhenVisible>
+        </FadeInWhenVisible>
+      </div>
+    </section>
   );
 }

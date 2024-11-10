@@ -1,3 +1,4 @@
+import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
 import ExternalLink from "./ExternalLink";
 import LocalLink from "./LocalLink";
 import SocialLink from "./SocialLink";
@@ -9,10 +10,12 @@ const Section = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <div className="space-y-2">
-    <h3 className="text-lg font-semibold">{title}</h3>
-    {children}
-  </div>
+  <FadeInWhenVisible>
+    <div className="space-y-2">
+      <h3 className="text-lg font-semibold">{title}</h3>
+      {children}
+    </div>
+  </FadeInWhenVisible>
 );
 
 export default function Footer() {

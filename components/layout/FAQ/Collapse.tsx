@@ -1,3 +1,4 @@
+import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
 import {
   AccordionContent,
   AccordionItem,
@@ -14,9 +15,11 @@ export default function Collapse({
 }) {
   const id = useId();
   return (
-    <AccordionItem value={id}>
-      <AccordionTrigger>{question}</AccordionTrigger>
-      <AccordionContent>{answer}</AccordionContent>
-    </AccordionItem>
+    <FadeInWhenVisible>
+      <AccordionItem value={id}>
+        <AccordionTrigger>{question}</AccordionTrigger>
+        <AccordionContent>{answer}</AccordionContent>
+      </AccordionItem>
+    </FadeInWhenVisible>
   );
 }
