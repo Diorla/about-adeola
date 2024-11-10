@@ -24,6 +24,13 @@ const testimonial = [
     testimony:
       "He were always responsive to our questions and concerns, made sure that our site was optimized for SEO and user experience.",
   },
+  {
+    name: "Mo Basi",
+    role: "CEO, Tech Company",
+    image: "/people/mo.jpeg",
+    testimony:
+      "Adeola took the time to understand our company's brand and values, and used this information to craft a beautiful and intuitive design that truly captured our essence.",
+  },
   // {
   //   name: "Eunice Pardo",
   //   role: "CEO, Tech Company",
@@ -37,13 +44,6 @@ const testimonial = [
   //   image: "/me.jpg",
   //   testimony:
   //     "I would highly recommend Adeola to anyone looking for a skilled and reliable web developer. His work is exceptional.",
-  // },
-  // {
-  //   name: "Mo Basi",
-  //   role: "CEO, Tech Company",
-  //   image: "/me.jpg",
-  //   testimony:
-  //     "Adeola took the time to understand our company's brand and values, and used this information to craft a beautiful and intuitive design that truly captured our essence.",
   // },
   // {
   //   name: "Kola Enitan",
