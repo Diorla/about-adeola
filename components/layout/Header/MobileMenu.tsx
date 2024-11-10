@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import SlideIn from "./SlideIn";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,48 +60,60 @@ export default function MobileMenu() {
             variants={menuVariants}
           >
             <nav className="flex flex-col space-y-4 text-lg">
-              <Link
-                href="/"
-                className="hover:text-primary"
-                onClick={toggleMenu}
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="hover:text-primary"
-                onClick={toggleMenu}
-              >
-                About
-              </Link>
-              <Link
-                href="/projects"
-                className="hover:text-primary"
-                onClick={toggleMenu}
-              >
-                Projects
-              </Link>
-              <Link
-                href="/services"
-                className="hover:text-primary"
-                onClick={toggleMenu}
-              >
-                Services
-              </Link>
-              <Link
-                href="/journal"
-                className="hover:text-primary"
-                onClick={toggleMenu}
-              >
-                Journal
-              </Link>
-              <Link
-                href="/contact"
-                className="hover:text-primary"
-                onClick={toggleMenu}
-              >
-                Contact
-              </Link>
+              <SlideIn>
+                <Link
+                  href="/"
+                  className="hover:text-primary hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Home
+                </Link>
+              </SlideIn>
+              <SlideIn idx={1}>
+                <Link
+                  href="/about"
+                  className="hover:text-primary hover:underline"
+                  onClick={toggleMenu}
+                >
+                  About
+                </Link>
+              </SlideIn>
+              <SlideIn idx={2}>
+                <Link
+                  href="/projects"
+                  className="hover:text-primary hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Projects
+                </Link>
+              </SlideIn>
+              <SlideIn idx={3}>
+                <Link
+                  href="/services"
+                  className="hover:text-primary hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Services
+                </Link>
+              </SlideIn>
+              <SlideIn idx={4}>
+                <Link
+                  href="/journal"
+                  className="hover:text-primary hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Journal
+                </Link>
+              </SlideIn>
+              <SlideIn idx={5}>
+                <Link
+                  href="/contact"
+                  className="hover:text-primary hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Contact
+                </Link>
+              </SlideIn>
             </nav>
           </motion.div>
         )}
