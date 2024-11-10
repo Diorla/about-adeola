@@ -3,10 +3,10 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import FAQ from "@/components/local/FAQ";
-import Header from "@/components/local/Header";
-import Posts from "@/components/local/Posts";
-import Footer from "@/components/local/Footer";
+import FAQ from "@/components/layout/FAQ";
+import Header from "@/components/layout/Header";
+import Posts from "@/components/layout/Posts";
+import Footer from "@/components/layout/Footer";
 import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
 
 const geistSans = localFont({
