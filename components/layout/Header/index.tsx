@@ -1,13 +1,36 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import MobileMenu from "./MobileMenu";
 import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className="sticky top-0 z-50 w-full bg-white">
-      <div className="flex h-14 items-center justify-between">
+    <motion.header
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        isScrolled ? "bg-black shadow-md" : "bg-transparent"
+      }`}
+    >
+      <div className="flex items-center justify-between">
         <FadeInWhenVisible>
           <div className="mr-4 hidden sm:flex">
             <Link className="ml-2 flex items-center space-x-2" href="/">
@@ -24,7 +47,6 @@ export default function Header() {
           <div className="mr-4 sm:hidden flex">
             <Link className="ml-2 flex items-center space-x-2" href="/">
               <Image
-                className="dark:invert"
                 src="/favicon.svg"
                 alt="Adeola logo"
                 height={50}
@@ -35,27 +57,27 @@ export default function Header() {
           </div>
         </FadeInWhenVisible>
         <FadeInWhenVisible>
-          <nav className=" hidden sm:flex items-center space-x-6 text-sm font-medium">
+          <nav className="hidden sm:flex items-center space-x-6 text-lg font-medium">
             <Link
-              className="transition-colors hover:text-foreground/100 text-foreground/80"
+              className="transition-colors hover:text-background/80 text-white"
               href="/about"
             >
               About
             </Link>
             <Link
-              className="transition-colors hover:text-foreground/100 text-foreground/80"
+              className="transition-colors hover:text-background/80 text-white"
               href="/projects"
             >
               Projects
             </Link>
             <Link
-              className="transition-colors hover:text-foreground/100 text-foreground/80"
+              className="transition-colors hover:text-background/80 text-white"
               href="/services"
             >
               Services
             </Link>
             <Link
-              className="transition-colors hover:text-foreground/100 text-foreground/80"
+              className="transition-colors hover:text-background/80 text-white"
               href="/journal"
             >
               Journal
@@ -64,13 +86,15 @@ export default function Header() {
         </FadeInWhenVisible>
         <FadeInWhenVisible>
           <div className="hidden sm:flex items-center space-x-2 md:justify-end mr-2">
-            <Button asChild>
-              <Link href="/contact">Contact</Link>
+            <Button asChild variant="secondary">
+              <Link href="/contact" className="text-lg">
+                Contact
+              </Link>
             </Button>
           </div>
           <MobileMenu />
         </FadeInWhenVisible>
       </div>
-    </header>
+    </motion.header>
   );
 }
