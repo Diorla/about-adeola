@@ -8,7 +8,7 @@ import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
 import LandingWrapper from "@/components/main/LandingWrapper";
 import { CheckCircle } from "lucide-react";
 import TypewriterEffect from "@/components/main/TypeWriter";
-import ProcessSection from "./Process";
+import ProcessSection from "../../components/about/Process";
 
 function SkillBadge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
