@@ -1,20 +1,19 @@
-
 # Project Title
 
 This is my personal website
-
 
 ## Badges
 
 ![TypeScript](https://img.shields.io/badge/Typescript-2F74C0?style=for-the-badge&logo=typescript&logoColor=black)
 ![NextJS](https://img.shields.io/badge/Nextjs-20232A?style=for-the-badge&logo=next.js&logoColor=white)
-![ExpressJS](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express)
 ![Figma](https://img.shields.io/badge/Figma-2c2c2c?style=for-the-badge&logo=figma&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-f14e32?&style=for-the-badge&logo=git&logoColor=white)
 ![Github](https://img.shields.io/badge/Github-24292f?&style=for-the-badge&logo=github&logoColor=white)
 ![Tailwindcss](https://img.shields.io/badge/Tailwind-38bdf8?&style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Shadcn](https://img.shields.io/badge/Shadcn-000000?&style=for-the-badge&logo=shadcnui&logoColor=white)
 
 ## Color Reference
+
 ![#020617](https://via.placeholder.com/100/020617?text=+)
 ![#3f3f46](https://via.placeholder.com/100/3f3f46?text=+)
 ![#71717a](https://via.placeholder.com/100/71717a?text=+)
@@ -25,10 +24,10 @@ This is my personal website
 
 [Website](https://adeolaade.com/)
 
-
 ## Feedback
 
 If you have any feedback, please reach out to me [here](https://adeolaade.com/contact)
+
 ## Installation
 
 Install my-project with npm
@@ -38,11 +37,9 @@ Install my-project with npm
   cd about-adeola
 ```
 
-
 ## Support
 
-For support, reach out to me [here](http://localhost:3000/contact)
-
+For support, reach out to me [here](https://adeolaade.com/contact)
 
 ## Screenshots
 
@@ -52,7 +49,6 @@ For support, reach out to me [here](http://localhost:3000/contact)
 ![Blogs](./public/about-adeola/blogs.png)
 ![Case study](./public/about-adeola/case_study.png)
 
-
 ## Run Locally
 
 Clone the project
@@ -60,7 +56,6 @@ Clone the project
 ```bash
   git clone https://link-to-project
 ```
-
 
 Install dependencies
 
@@ -74,10 +69,8 @@ Start the server
   npm run dev
 ```
 
-
-![Logo](./public/og.png)
+![Logo](./public/brand.png)
 ![Logo](./public/favicon.png)
-
 
 ## License
 

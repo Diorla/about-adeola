@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     siteName: "Adeola's Portfolio",
     images: [
       {
-        url: "/og.png",
+        url: "/brand.png",
         width: 1200,
         height: 630,
         alt: "Adeola's Portfolio",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     creator: "@dihorla",
     images: [
       {
-        url: "/og.png",
+        url: "/brand.png",
         width: 1200,
         height: 630,
         alt: "Adeola's Portfolio",
