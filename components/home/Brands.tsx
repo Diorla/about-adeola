@@ -13,7 +13,7 @@ const images = [
   "mount-zion.png",
   "qisetna.png",
   "salady.jpg",
-  "brand.png",
+  "nga.png",
 ];
 
 const halfway = Math.ceil(images.length / 2);
