@@ -12,7 +12,7 @@ interface TypewriterEffectProps {
 
 export default function TypewriterEffect({
   text,
-  speed = 50,
+  speed = 200,
   className = "",
 }: TypewriterEffectProps) {
   const [displayedText, setDisplayedText] = useState("");
