@@ -9,7 +9,9 @@ import { motion } from "framer-motion";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
+    setIsScrolled(window.scrollY > 10);
     const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true);
@@ -24,6 +26,29 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     console.log("hello");
+  //     if (window.scrollY > 10) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       window.scrollTo({
+  //         top: 0,
+  //         behavior: "smooth",
+  //       });
+  //       setIsScrolled(false);
+  //     }
+  //   };
+
+  //   document.addEventListener("DOMContentLoaded", handleScroll);
+
+  //   return () => {
+  //     document.removeEventListener("scroll", handleScroll);
+  //   };
+  //   // document.body.addEventListener("load", handleScroll);
+  // }, []);
+
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${

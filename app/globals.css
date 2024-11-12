@@ -38,9 +38,40 @@ body {
   animation: scroll-right 30s linear infinite forwards;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-opacity {
+  animation: fade-in 1s forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-scroll-left,
-  .animate-scroll-right {
+  .animate-scroll-right,
+  .animate-blink,
+  .animate-opacity {
     animation: none;
   }
 }
