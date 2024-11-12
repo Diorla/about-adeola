@@ -2,19 +2,19 @@ import Image from "next/image";
 import FadeInWhenVisible from "./FadeInWhenVisible";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
-import ProjectProps from "./ProjectProps";
+import ProjectProps from "../../types/ProjectProps";
 
 export default function ProjectCard({
-  img,
+  image,
   title,
   description,
-  tools,
+  tags,
 }: ProjectProps) {
   return (
     <Card className="overflow-hidden">
       <FadeInWhenVisible>
         <Image
-          src={img}
+          src={image}
           alt={title}
           width={400}
           height={300}
@@ -26,8 +26,8 @@ export default function ProjectCard({
           <h3 className="text-xl font-semibold mb-2">{title}</h3>
           <p className="text-muted-foreground mb-4">{description}</p>
           <div className="flex flex-wrap gap-2">
-            {tools.map((tool, idx) => (
-              <Badge key={idx}>{tool}</Badge>
+            {tags.map((tag, idx) => (
+              <Badge key={idx}>{tag}</Badge>
             ))}
           </div>
         </CardContent>

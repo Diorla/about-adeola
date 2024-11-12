@@ -1,6 +1,8 @@
 export default interface ProjectProps {
-  img: string;
+  image: string;
   title: string;
   description: string;
-  tools: string[];
+  tags: string[];
+  sourceLink: string;
+  liveLink: string;
 }

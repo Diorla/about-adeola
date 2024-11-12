@@ -1,37 +1,38 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import ProjectProps from "./ProjectProps";
+// import ProjectProps from "./ProjectProps";
 import ProjectCard from "./ProjectCard";
 import FadeInWhenVisible from "./FadeInWhenVisible";
+import projects from "@/data/projects";
 
-const projects: ProjectProps[] = [
-  {
-    title: "Cloudmark",
-    description: "",
-    tools: [
-      "React",
-      "Next.js",
-      "Tailwind",
-      "Material-ui",
-      "Expo",
-      "React-native",
-      "Firebase",
-    ],
-    img: "/projects/cloudmark.png",
-  },
-  {
-    title: "Focus forge",
-    description: "",
-    tools: ["Expo", "React-native", "Firebase"],
-    img: "/projects/focus-forge.jpg",
-  },
-  {
-    title: "Hera",
-    description: "",
-    tools: ["React.js", "Styled-jsx"],
-    img: "/projects/hera.jpg",
-  },
-];
+// const projects: ProjectProps[] = [
+//   {
+//     title: "Cloudmark",
+//     description: "",
+//     tools: [
+//       "React",
+//       "Next.js",
+//       "Tailwind",
+//       "Material-ui",
+//       "Expo",
+//       "React-native",
+//       "Firebase",
+//     ],
+//     img: "/projects/cloudmark.png",
+//   },
+//   {
+//     title: "Focus forge",
+//     description: "",
+//     tools: ["Expo", "React-native", "Firebase"],
+//     img: "/projects/focus-forge.jpg",
+//   },
+//   {
+//     title: "Hera",
+//     description: "",
+//     tools: ["React.js", "Styled-jsx"],
+//     img: "/projects/hera.jpg",
+//   },
+// ];
 
 export default function Project() {
   return (
