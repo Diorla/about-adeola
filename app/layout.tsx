@@ -8,6 +8,8 @@ import Header from "@/components/layout/Header";
 import Posts from "@/components/layout/Posts";
 import Footer from "@/components/layout/Footer";
 import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -111,7 +113,6 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <FAQ />
         <Posts />
-
         <section className="bg-primary text-primary-foreground py-12">
           <div className=" text-center">
             <FadeInWhenVisible>
@@ -134,8 +135,9 @@ export default function RootLayout({
             </FadeInWhenVisible>
           </div>
         </section>
-
         <Footer />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
