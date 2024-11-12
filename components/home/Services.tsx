@@ -41,7 +41,7 @@ const services = [
 ];
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-muted">
+    <section id="services" className="py-20">
       <div className="container mx-auto px-4">
         <FadeInWhenVisible>
           <h2 className="text-3xl font-bold mb-12 text-center">My Services</h2>

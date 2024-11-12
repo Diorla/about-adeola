@@ -35,7 +35,7 @@ const projects: ProjectProps[] = [
 
 export default function Project() {
   return (
-    <section id="projects" className="py-20 ">
+    <section id="projects" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <FadeInWhenVisible>
           <h2 className="text-3xl font-bold mb-12 text-center">

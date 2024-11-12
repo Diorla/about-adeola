@@ -18,8 +18,6 @@ export default function Home() {
 
       <Project />
 
-      <hr />
-
       <Brands />
     </div>
   );
