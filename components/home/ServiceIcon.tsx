@@ -10,13 +10,7 @@ const useBreakpoint = createBreakpoint({
   "2xl": 1536,
 });
 
-export default function ServiceIcon({
-  animated,
-  img,
-}: {
-  animated: boolean;
-  img: string;
-}) {
+export default function ServiceIcon({ img }: { img: string }) {
   const breakpoint = useBreakpoint();
 
   if (breakpoint === "sm")
@@ -34,7 +28,7 @@ export default function ServiceIcon({
   return (
     <div className="flex items-center justify-center">
       <Image
-        src={animated ? `/animations/${img}.gif` : `/animations/${img}.png`}
+        src={`/animations/${img}.gif`}
         alt="Adeola"
         width={80}
         height={80}
