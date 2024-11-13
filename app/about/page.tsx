@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
 import LandingWrapper from "@/components/main/LandingWrapper";
-import { CheckCircle } from "lucide-react";
 import TypewriterEffect from "@/components/main/TypeWriter";
 import Approach from "./Approach";
 import type { Metadata } from "next";
+import Check from "@/components/main/Check";
 
 export const metadata: Metadata = {
   title: "About",
@@ -77,28 +77,28 @@ export default function AboutPage() {
         </p>
         <ul className="space-y-2 mb-6">
           <li className="flex items-center">
-            <CheckCircle className="mr-2 h-5 w-5 text-red-900" />
+            <Check />
             <span>Deliver high-quality, scalable, and maintainable code</span>
           </li>
           <li className="flex items-center">
-            <CheckCircle className="mr-2 h-5 w-5 text-red-900" />
+            <Check />
             <span className="flex-inline">
               Provide end-to-end solutions, from database design to user
               interface implementation
             </span>
           </li>
           <li className="flex items-center">
-            <CheckCircle className="mr-2 h-5 w-5 text-red-900" />
+            <Check />
             <span>Optimize application performance and user experience</span>
           </li>
           <li className="flex items-center">
-            <CheckCircle className="mr-2 h-5 w-5 text-red-900" />
+            <Check />
             <span>
               Stay updated with the latest technologies and best practices
             </span>
           </li>
           <li className="flex items-center">
-            <CheckCircle className="mr-2 h-5 w-5 text-red-900" />
+            <Check />
             <span>Collaborate effectively with cross-functional teams</span>
           </li>
         </ul>
