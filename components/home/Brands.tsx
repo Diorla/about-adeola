@@ -14,11 +14,12 @@ const images = [
   "qisetna.png",
   "salady.jpg",
   "nga.png",
+  "diamond.png",
 ];
 
 const halfway = Math.ceil(images.length / 2);
 const top = images.slice(0, halfway);
-const bottom = images.slice(halfway, 12);
+const bottom = images.slice(halfway, images.length);
 
 export default function Brands() {
   return (
