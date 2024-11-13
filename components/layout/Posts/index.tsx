@@ -28,12 +28,7 @@ export default async function Posts() {
               );
             })
             .map((post) => (
-              <PostCard
-                key={post.id}
-                title={post.title}
-                summary={post.description}
-                slug={post.slug}
-              />
+              <PostCard key={post.id} {...post} />
             ))}
         </div>
         <FadeInWhenVisible>
