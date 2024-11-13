@@ -1,4 +1,4 @@
-import LandingWrapper from "@/components/main/LandingWrapper";
+import Jumbotron from "@/components/main/Jumbotron";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,11 +7,8 @@ export const metadata: Metadata = {
 
 export default function Journal() {
   return (
-    <LandingWrapper>
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-4xl font-bold">Welcome to the Journal Page</h1>
-        Journal page
-      </div>
-    </LandingWrapper>
+    <main>
+      <Jumbotron title="Journal" subtitle="Welcome to the Journal Page" />
+    </main>
   );
 }

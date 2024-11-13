@@ -1,6 +1,6 @@
-import LandingWrapper from "@/components/main/LandingWrapper";
 import type { Metadata } from "next";
 import TabSection from "./TabSection";
+import Jumbotron from "@/components/main/Jumbotron";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -9,14 +9,10 @@ export const metadata: Metadata = {
 export default function Services() {
   return (
     <main>
-      <LandingWrapper>
-        <section className="flex flex-col items-center justify-center my-32">
-          <h1 className="text-4xl font-bold">Services</h1>
-          <p className="text-xl text-center mb-12">
-            Comprehensive solutions to bring your digital vision to life
-          </p>
-        </section>
-      </LandingWrapper>
+      <Jumbotron
+        title="Services"
+        subtitle="Comprehensive solutions to bring your digital vision to life"
+      />
       <TabSection />
     </main>
   );

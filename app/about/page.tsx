@@ -2,11 +2,11 @@ import { Code, Palette, Zap } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
-import LandingWrapper from "@/components/main/LandingWrapper";
 import TypewriterEffect from "@/components/main/TypeWriter";
 import Approach from "./Approach";
 import type { Metadata } from "next";
 import Check from "@/components/main/Check";
+import Jumbotron from "@/components/main/Jumbotron";
 
 export const metadata: Metadata = {
   title: "About",
@@ -24,29 +24,24 @@ function SkillBadge({ icon, text }: { icon: React.ReactNode; text: string }) {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
-      <LandingWrapper>
+      <Jumbotron title="Adeola">
         <FadeInWhenVisible>
-          <div className="min-h-screen flex flex-col justify-center items-center p-4 text-white">
-            <div className="flex flex-col items-center justify-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-2">Adeola</h1>
-              <h2 className="lg:text-5xl text-3xl text-center py-2">
-                <TypewriterEffect
-                  text="A freelancer that works with individuals, startups and
+          <h2 className="text-xl text-center py-2">
+            <TypewriterEffect
+              text="A freelancer that works with individuals, startups and
                 companies."
-                />
-              </h2>
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <SkillBadge icon={<Code size={24} />} text="Web Development" />
-                <SkillBadge icon={<Palette size={24} />} text="UI/UX Design" />
-                <SkillBadge
-                  icon={<Zap size={24} />}
-                  text="Performance Optimization"
-                />
-              </div>
-            </div>
+            />
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <SkillBadge icon={<Code size={24} />} text="Web Development" />
+            <SkillBadge icon={<Palette size={24} />} text="UI/UX Design" />
+            <SkillBadge
+              icon={<Zap size={24} />}
+              text="Performance Optimization"
+            />
           </div>
         </FadeInWhenVisible>
-      </LandingWrapper>
+      </Jumbotron>
 
       <section className="w-full flex items-center flex-col py-8">
         <FadeInWhenVisible>
