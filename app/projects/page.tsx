@@ -4,6 +4,12 @@ import LandingWrapper from "@/components/main/LandingWrapper";
 import projects from "@/data/projects";
 import ProjectCard from "./ProjectCard";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
+
 export default function ProjectsPage() {
   return (
     <div>

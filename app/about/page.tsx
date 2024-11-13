@@ -1,5 +1,3 @@
-"use client";
-
 import { Code, Palette, Zap } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -8,6 +6,11 @@ import LandingWrapper from "@/components/main/LandingWrapper";
 import { CheckCircle } from "lucide-react";
 import TypewriterEffect from "@/components/main/TypeWriter";
 import Approach from "./Approach";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 function SkillBadge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
