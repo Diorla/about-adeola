@@ -33,10 +33,13 @@ export default function About() {
             </FadeInWhenVisible>
             <FadeInWhenVisible>
               <p className="text-lg mb-4">
-                My expertise includes front-end technologies like React and
-                Next.js, as well as back-end development with Node.js. I&apos;m
-                committed to writing clean, efficient code and staying
-                up-to-date with the latest web technologies and best practices.
+                I&apos;m a web developer specializing in creating modern,
+                responsive, and user-friendly websites. I craft beautiful,
+                functional websites that drive results. My expertise includes
+                front-end technologies like React and Next.js, as well as
+                back-end development with Node.js. I&apos;m committed to writing
+                clean, efficient code and staying up-to-date with the latest web
+                technologies and best practices.
               </p>
             </FadeInWhenVisible>
             <FadeInWhenVisible>

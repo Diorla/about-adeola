@@ -26,7 +26,7 @@ const testimonial = [
   },
   {
     name: "Mo Basi",
-    role: "CEO, Tech Company",
+    role: "Senior developer, Cardinal Health Inc.",
     image: "/people/mo.jpeg",
     testimony:
       "Adeola took the time to understand our company's brand and values, and used this information to craft a beautiful and intuitive design that truly captured our essence.",

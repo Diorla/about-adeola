@@ -29,9 +29,7 @@ export default function Landing() {
             animate={{ y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            I&apos;m a web developer specializing in creating modern,
-            responsive, and user-friendly websites. I craft beautiful,
-            functional websites that drive results
+            Design, Develop, Create something beautiful
           </motion.p>
           <motion.div
             initial={{ scale: 0 }}
