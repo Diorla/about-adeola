@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: { project: ProjectProps }) {
             alt={project.title}
             layout="fill"
             objectFit="cover"
-            className="transition-transform duration-300 ease-in-out transform hover:scale-110"
+            className="transition-transform duration-300 ease-in-out transform hover:scale-110 rounded-t-lg"
           />
         </CardHeader>
         <CardContent className="flex-grow">

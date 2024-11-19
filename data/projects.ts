@@ -2,6 +2,31 @@ import ProjectProps from "@/types/ProjectProps";
 
 const projects: ProjectProps[] = [
   {
+    title: "Image converter",
+    description: "Compress, convert and cut your images",
+    tags: ["React", "Typescript", "JIMP", "HTML"],
+    image: "/projects/image-converter.png",
+    sourceLink: "https://github.com/Diorla/image-converter",
+    liveLink: "https://image-converter-beta.vercel.app/",
+  },
+  {
+    title: "Salady",
+    description: "건강한 패스트푸드 샐러디입니다. 메뉴, 영양정보, 매장 안내",
+    tags: ["HTML", "CSS", "Javascript", "CSS-in-JS", "Figma"],
+    image: "/projects/salady.png",
+    sourceLink: "",
+    liveLink: "https://salady.com/",
+  },
+  {
+    title: "Brixton Labyrinth",
+    description:
+      "As an artistic participatory project with a group of young people with autism based in South London",
+    tags: ["Figma", "Wordpress", "CMS", "HTML", "Javascript", "PHP"],
+    image: "/projects/brixton-labyrinth.png",
+    sourceLink: "",
+    liveLink: "https://brixtonlabyrinth.wordpress.com/",
+  },
+  {
     title: "Cloudmark",
     description: "Save once access everywhere",
     tags: [
