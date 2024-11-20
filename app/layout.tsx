@@ -27,7 +27,8 @@ export const metadata: Metadata = {
     default: "Home | Adeola",
     template: "%s | Adeola",
   },
-  description: "Web developer in London",
+  description:
+    "Web developer in London. This is the portfolio of Adeola, a full-time freelance web designer and developer, a University of Sunderland graduate, providing websites for clients in London and all over the world since 2016. I create 100% bespoke, responsive websites tailored to meet your requirements. I am a flexible, dedicated, professional freelancer, who understands the importance of a well designed, functional website that makes an impact online and helps your business grow. In short, I design websites, I develop websites, I tweak websites and I work with HTML, CSS and JavaScript, as well as framework like React.js and CMS like Wordpress. I work with a range of businesses from individuals, startups and large corporates. If you have a project you'd like to discuss, send me an email and I'll get back to you.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.png",
