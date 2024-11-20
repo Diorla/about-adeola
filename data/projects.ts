@@ -2,31 +2,6 @@ import ProjectProps from "@/types/ProjectProps";
 
 const projects: ProjectProps[] = [
   {
-    title: "Image converter",
-    description: "Compress, convert and cut your images",
-    tags: ["React", "Typescript", "JIMP", "HTML"],
-    image: "/projects/image-converter.png",
-    sourceLink: "https://github.com/Diorla/image-converter",
-    liveLink: "https://image-converter-beta.vercel.app/",
-  },
-  {
-    title: "Salady",
-    description: "건강한 패스트푸드 샐러디입니다. 메뉴, 영양정보, 매장 안내",
-    tags: ["HTML", "CSS", "Javascript", "CSS-in-JS", "Figma"],
-    image: "/projects/salady.png",
-    sourceLink: "",
-    liveLink: "https://salady.com/",
-  },
-  {
-    title: "Brixton Labyrinth",
-    description:
-      "As an artistic participatory project with a group of young people with autism based in South London",
-    tags: ["Figma", "Wordpress", "CMS", "HTML", "Javascript", "PHP"],
-    image: "/projects/brixton-labyrinth.png",
-    sourceLink: "",
-    liveLink: "https://brixtonlabyrinth.wordpress.com/",
-  },
-  {
     title: "Cloudmark",
     description: "Save once access everywhere",
     tags: [
@@ -42,6 +17,32 @@ const projects: ProjectProps[] = [
     image: "/projects/cloudmark.png",
     sourceLink: "",
     liveLink: "https://cloudmarkk.web.app/",
+  },
+  {
+    title: "Salady",
+    description: "건강한 패스트푸드 샐러디입니다. 메뉴, 영양정보, 매장 안내",
+    tags: ["HTML", "CSS", "Javascript", "CSS-in-JS", "Figma"],
+    image: "/projects/salady.png",
+    sourceLink: "",
+    liveLink: "https://salady.com/",
+  },
+  {
+    title: "Image Processor - Convert, Compress, and Resize Images Online",
+    description:
+      "Free online tool to convert, compress, and resize your images. Support for WebP, JPEG, and PNG formats. Easy to use with drag and drop functionality.",
+    tags: ["React", "Typescript", "Sharp", "HTML"],
+    image: "/projects/image-processor.png",
+    sourceLink: "https://github.com/Diorla/image-converter",
+    liveLink: "https://image-converter.adeolaade.com/",
+  },
+  {
+    title: "Brixton Labyrinth",
+    description:
+      "As an artistic participatory project with a group of young people with autism based in South London",
+    tags: ["Figma", "Wordpress", "CMS", "HTML", "Javascript", "PHP"],
+    image: "/projects/brixton-labyrinth.png",
+    sourceLink: "",
+    liveLink: "https://brixtonlabyrinth.wordpress.com/",
   },
   {
     title: "Focus forge",
