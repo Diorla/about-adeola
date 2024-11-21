@@ -8,7 +8,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import Image from "next/image";
 
 export function ContactForm() {
-  const [state, handleSubmit] = useForm("mqkglvzz");
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM_ID || "");
 
   if (state.succeeded) {
     return (
