@@ -13,7 +13,7 @@ export default async function Posts() {
   const posts = (await data.json()) as Post[];
 
   return (
-    <section className="py-12 px-6">
+    <section className="py-12 px-6 hide-post">
       <div className="">
         <FadeInWhenVisible>
           <h2 className="text-2xl font-bold mb-6">Posts</h2>

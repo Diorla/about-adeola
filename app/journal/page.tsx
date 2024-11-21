@@ -9,6 +9,13 @@ export const metadata: Metadata = {
 export default function Journal() {
   return (
     <main>
+      <style>
+        {`
+          .hide-post {
+            display: none;
+          }
+          `}
+      </style>
       <Jumbotron title="Journal" subtitle="Welcome to the Journal Page" />
       <JournalSection />
     </main>
