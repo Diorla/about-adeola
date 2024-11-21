@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link";
@@ -22,6 +22,12 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#800000",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 export const metadata: Metadata = {
   title: {
     default: "Home | Adeola",
@@ -56,7 +62,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  manifest: "/manifest.json",
+  manifest: "https://adeolaade.com/manifest.json",
   openGraph: {
     title: "Adeola",
     description: "Web developer in London",
@@ -95,6 +101,7 @@ export const metadata: Metadata = {
   },
   classification: "Portfolio",
   metadataBase: new URL("https://adeolaade.com"),
+  referrer: "origin-when-cross-origin",
 };
 
 export default function RootLayout({
