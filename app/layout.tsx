@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 import FadeInWhenVisible from "@/components/home/FadeInWhenVisible";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import Chatbot from "@/components/chatbot";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -143,6 +144,7 @@ export default function RootLayout({
             </FadeInWhenVisible>
           </div>
         </section>
+        <Chatbot />
         <Footer />
         <SpeedInsights />
         <Analytics />
