@@ -33,14 +33,7 @@ export default function Footer() {
           </Section>
           <Section title="Current Projects">
             <ul className="text-sm space-y-2">
-              <ExternalLink
-                href="https://cloudmarkk.web.app/"
-                name="Cloudmark"
-              />
-              <ExternalLink
-                href="https://focus-forge.adeolaade.com/"
-                name="Focus forge"
-              />
+              <ExternalLink href="https://habiterie.com/" name="Habiterie" />
             </ul>
           </Section>
           <Section title="Navigation">

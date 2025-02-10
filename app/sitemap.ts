@@ -3,29 +3,29 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://adeolaade.com/",
+      url: "https://www.adeolaade.com/",
       lastModified: new Date(),
       // changeFrequency: "yearly",
       // priority: 1,
     },
     {
-      url: "https://adeolaade.com/about",
+      url: "https://www.adeolaade.com/about",
       lastModified: new Date(),
     },
     {
-      url: "https://adeolaade.com/projects",
+      url: "https://www.adeolaade.com/projects",
       lastModified: new Date(),
     },
     {
-      url: "https://adeolaade.com/services",
+      url: "https://www.adeolaade.com/services",
       lastModified: new Date(),
     },
     {
-      url: "https://adeolaade.com/journal",
+      url: "https://www.adeolaade.com/journal",
       lastModified: new Date(),
     },
     {
-      url: "https://adeolaade.com/contact",
+      url: "https://www.adeolaade.com/contact",
       lastModified: new Date(),
     },
   ];

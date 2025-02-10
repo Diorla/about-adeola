@@ -2,7 +2,7 @@ import ProjectProps from "@/types/ProjectProps";
 
 const projects: ProjectProps[] = [
   {
-    title: "Cloudmark",
+    title: "Habiterie",
     description: "Save once access everywhere",
     tags: [
       "React",
@@ -14,9 +14,9 @@ const projects: ProjectProps[] = [
       "Firebase",
       "Stripe",
     ],
-    image: "/projects/cloudmark.png",
+    image: "/projects/habiterie.png",
     sourceLink: "",
-    liveLink: "https://cloudmarkk.web.app/",
+    liveLink: "https://habiterie.com/",
   },
   {
     title: "Salady",
