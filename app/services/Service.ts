@@ -4,4 +4,5 @@ export default interface Service {
   icon: React.ElementType;
   features: string[];
   category: ("development" | "design" | "marketing")[];
+  link: string;
 }

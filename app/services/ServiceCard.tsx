@@ -10,6 +10,7 @@ import {
 import Service from "./Service";
 import Check from "@/components/main/Check";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ServiceCard({ service }: { service: Service }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -29,7 +30,7 @@ export default function ServiceCard({ service }: { service: Service }) {
             transition={{ duration: 0.2 }}
           >
             <Button variant="outline" size="sm">
-              Learn More
+              <Link href={`/services/${service.link}`}>Learn More</Link>
             </Button>
           </motion.div>
         </div>

@@ -1,9 +1,10 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import serviceList from "./serviceList";
 import ServiceCard from "./ServiceCard";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function TabSection() {
   return (
@@ -59,7 +60,9 @@ export default function TabSection() {
             requirements. Let&apos;s discuss your project and create a custom
             plan that fits your needs perfectly.
           </p>
-          <Button size="lg">Get in Touch</Button>
+          <Button asChild>
+            <Link href="/journal">Get in touch</Link>
+          </Button>
         </section>
       </div>
     </div>

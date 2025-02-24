@@ -23,6 +23,7 @@ const serviceList: Service[] = [
       "Accessibility compliance",
     ],
     category: ["development"],
+    link: "web-development",
   },
   {
     title: "UI/UX Design",
@@ -37,6 +38,7 @@ const serviceList: Service[] = [
       "Design system creation",
     ],
     category: ["design"],
+    link: "ui-ux-design",
   },
   {
     title: "Mobile App Development",
@@ -51,6 +53,7 @@ const serviceList: Service[] = [
       "Offline functionality",
     ],
     category: ["development"],
+    link: "mobile-app-development",
   },
   {
     title: "E-commerce Solutions",
@@ -65,6 +68,7 @@ const serviceList: Service[] = [
       "Analytics and reporting",
     ],
     category: ["development", "marketing"],
+    link: "e_commerce-development",
   },
   {
     title: "SEO Optimization",
@@ -79,6 +83,7 @@ const serviceList: Service[] = [
       "Link building",
     ],
     category: ["marketing"],
+    link: "seo-development",
   },
   {
     title: "Performance Optimization",
@@ -93,6 +98,7 @@ const serviceList: Service[] = [
       "Server-side rendering",
     ],
     category: ["development", "marketing"],
+    link: "performance-optimisation",
   },
   {
     title: "Branding",
@@ -107,6 +113,7 @@ const serviceList: Service[] = [
       "Brand messaging development",
     ],
     category: ["design", "marketing"],
+    link: "branding",
   },
 ];
 
