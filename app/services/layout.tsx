@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Jumbotron from "@/components/main/Jumbotron";
+import TabSection from "./TabSection";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -13,7 +14,8 @@ export default function Services({ children }: { children: React.ReactNode }) {
         subtitle="Comprehensive solutions to bring your digital vision to life"
       />
       {children}
-      <hr />
+      {children && <hr />}
+      <TabSection />
     </main>
   );
 }
