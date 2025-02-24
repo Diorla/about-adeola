@@ -1,8 +1,8 @@
 import projects from "@/data/projects";
-import ProjectCard from "./ProjectCard";
 
 import type { Metadata } from "next";
 import Jumbotron from "@/components/main/Jumbotron";
+import ProjectCard from "@/components/home/ProjectCard";
 
 export const metadata: Metadata = {
   title: "Projects",
