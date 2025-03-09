@@ -1,0 +1,154 @@
+{
+  "formName": "User Registration",
+  "formDescription": "Please fill out the following information.",
+  "fields": [
+    {
+      "type": "text",
+      "name": "firstName",
+      "label": "First Name",
+      "required": true,
+      "placeholder": "Enter your first name",
+      "validation": {
+        "minLength": 2,
+        "maxLength": 50,
+        "pattern": "^[a-zA-Z]+$"
+      }
+    },
+    {
+      "type": "text",
+      "name": "lastName",
+      "label": "Last Name",
+      "required": true,
+      "placeholder": "Enter your last name",
+      "validation": {
+        "minLength": 2,
+        "maxLength": 50,
+        "pattern": "^[a-zA-Z]+$"
+      }
+    },
+    {
+      "type": "email",
+      "name": "email",
+      "label": "Email",
+      "required": true,
+      "placeholder": "Enter your email",
+      "validation": {
+        "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      }
+    },
+    {
+      "type": "password",
+      "name": "password",
+      "label": "Password",
+      "required": true,
+      "placeholder": "Enter your password",
+      "validation": {
+        "minLength": 8,
+        "containsUppercase": true,
+        "containsLowercase": true,
+        "containsNumber": true,
+        "containsSpecialCharacter": true
+      }
+    },
+    {
+      "type": "number",
+      "name": "age",
+      "label": "Age",
+      "required": false,
+      "placeholder": "Enter your age",
+      "validation": {
+        "min": 18,
+        "max": 120
+      }
+    },
+    {
+      "type": "select",
+      "name": "gender",
+      "label": "Gender",
+      "required": true,
+      "options": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "name": "preference",
+      "label": "Preference",
+      "required": true,
+      "options": [
+        {
+          "value": "option1",
+          "label": "Option 1"
+        },
+        {
+          "value": "option2",
+          "label": "Option 2"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "name": "interests",
+      "label": "Interests",
+      "required": false,
+      "options": [
+        {
+          "value": "sports",
+          "label": "Sports"
+        },
+        {
+          "value": "music",
+          "label": "Music"
+        },
+        {
+          "value": "reading",
+          "label": "Reading"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "name": "comments",
+      "label": "Comments",
+      "required": false,
+      "placeholder": "Enter your comments",
+      "validation": {
+        "maxLength": 500
+      }
+    },
+    {
+      "type": "date",
+      "name": "birthdate",
+      "label": "Birthdate",
+      "required": false
+    },
+    {
+      "type": "file",
+      "name": "profilePicture",
+      "label": "Profile Picture",
+      "required": false,
+      "accept": "image/*"
+    },
+    {
+      "type": "tel",
+      "name": "phoneNumber",
+      "label": "Phone Number",
+      "required": false,
+      "placeholder": "Enter phone number",
+      "validation": {
+        "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+      }
+    }
+  ]
+}
