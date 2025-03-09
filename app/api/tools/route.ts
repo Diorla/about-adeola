@@ -1,6 +1,7 @@
 "use server";
 import { NextResponse } from "next/server";
 import mergeJsonFiles from "./mergeJsonFiles";
+import path from "path";
 export async function GET(request: Request) {
   const origin = request.headers.get("origin") || "";
 
@@ -10,8 +11,8 @@ export async function GET(request: Request) {
     const isAllowed =
       allowedDomains.includes(origin) || allowedDomains.includes("*");
 
-    // const data = await jsonfile.readFile("./app/api/tools/data.json");
-    const data = mergeJsonFiles("./app/api/tools/data");
+    const directory = path.resolve(process.cwd(), "./app/api/tools/data");
+    const data = mergeJsonFiles(directory);
 
     // return withCors(NextResponse.json(data[0]), isAllowed ? origin : "");
     return withCors(NextResponse.json(data), isAllowed ? origin : "*");
