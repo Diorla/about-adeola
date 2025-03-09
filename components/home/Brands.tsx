@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import FadeInWhenVisible from "./FadeInWhenVisible";
 
 const images = [
@@ -11,7 +11,6 @@ const images = [
   "community-trust.png",
   "focus-forge.png",
   "mount-zion.png",
-  "qisetna.png",
   "salady.jpg",
   "nga.png",
   "diamond.png",

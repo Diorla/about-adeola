@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm, ValidationError } from "@formspree/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("mqkglvzz");
