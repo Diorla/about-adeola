@@ -43,6 +43,7 @@ export default function Footer() {
               <LocalLink href="/services" name="Services" />
               <LocalLink href="/journal" name="Journal" />
               <LocalLink href="/contact" name="Contact" />
+              <LocalLink href="/questionnaire" name="Questionnaire" />
             </ul>
           </Section>
           <Section title="Reach Out">
