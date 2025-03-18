@@ -25,6 +25,9 @@ type Question = {
   options?: string[];
 };
 
+const placeholderOptions = `Option 1
+Option 2
+Option 3`;
 export function Questionnaire() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [title, setTitle] = useState("");
@@ -133,7 +136,7 @@ export function Questionnaire() {
                   id="options"
                   value={options}
                   onChange={(e) => setOptions(e.target.value)}
-                  placeholder="Option 1&#10;Option 2&#10;Option 3"
+                  placeholder={placeholderOptions}
                   rows={4}
                   required
                 />
