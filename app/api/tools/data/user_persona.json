@@ -1,0 +1,229 @@
+{
+  "id": 1,
+  "name": "User Persona Template",
+  "description": "Template for user persona used in UI/UX design.",
+  "fields": [
+    {
+      "id": 1,
+      "title": "Persona Name",
+      "type": "text",
+      "description": "e.g., Tech-Savvy Tina",
+      "options": []
+    },
+    {
+      "id": 2,
+      "title": "Age",
+      "type": "text",
+      "description": "e.g., 28",
+      "options": []
+    },
+    {
+      "id": 3,
+      "title": "Gender",
+      "type": "dropdown",
+      "description": "Select Gender",
+      "options": [
+        {
+          "id": 1,
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "id": 2,
+          "label": "Female",
+          "value": "female"
+        },
+        {
+          "id": 3,
+          "label": "Other",
+          "value": "other"
+        },
+        {
+          "id": 4,
+          "label": "Prefer not to say",
+          "value": "prefer not to say"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Location",
+      "type": "text",
+      "description": "e.g., Urban, London",
+      "options": []
+    },
+    {
+      "id": 5,
+      "title": "Occupation",
+      "type": "text",
+      "description": "e.g., Software Developer",
+      "options": []
+    },
+    {
+      "id": 6,
+      "title": "Income",
+      "type": "text",
+      "description": "e.g., £40,000 - £50,000 per year",
+      "options": []
+    },
+    {
+      "id": 7,
+      "title": "Education",
+      "type": "text",
+      "description": "e.g., Bachelor's Degree in Computer Science",
+      "options": []
+    },
+    {
+      "id": 8,
+      "title": "Relationship Status",
+      "type": "dropdown",
+      "description": "Select Status",
+      "options": [
+        {
+          "id": 1,
+          "label": "Single",
+          "value": "single"
+        },
+        {
+          "id": 2,
+          "label": "Married",
+          "value": "married"
+        },
+        {
+          "id": 3,
+          "label": "Divorced",
+          "value": "divorced"
+        },
+        {
+          "id": 4,
+          "label": "In a relationship",
+          "value": "relationship"
+        },
+        {
+          "id": 5,
+          "label": "Other",
+          "value": "other"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Family",
+      "type": "text",
+      "description": "e.g., None",
+      "options": []
+    },
+    {
+      "id": 10,
+      "title": "Primary Goal",
+      "type": "text",
+      "description": "e.g., To quickly find and purchase the best tech gadgets.",
+      "options": []
+    },
+    {
+      "id": 11,
+      "title": "Secondary Goals",
+      "type": "list",
+      "description": "e.g., To compare products easily, To get expert reviews, To have a seamless checkout process.",
+      "options": []
+    },
+    {
+      "id": 12,
+      "title": "Motivations",
+      "type": "list",
+      "description": "e.g., Staying up-to-date with technology, Saving time, Finding good value for money.",
+      "options": []
+    },
+    {
+      "id": 13,
+      "title": "Needs",
+      "type": "list",
+      "description": "e.g., Clear product information, User-friendly interface, Reliable customer support, Fast loading times.",
+      "options": []
+    },
+    {
+      "id": 14,
+      "title": "Frustrations",
+      "type": "list",
+      "description": "e.g., Confusing navigation, Slow websites, Lack of product reviews, Hidden fees.",
+      "options": []
+    },
+    {
+      "id": 15,
+      "title": "Tech Savviness",
+      "type": "text",
+      "description": "e.g., High, Comfortable with various devices and platforms.",
+      "options": []
+    },
+    {
+      "id": 16,
+      "title": "Preferred Devices",
+      "type": "text",
+      "description": "e.g., Smartphone, Laptop",
+      "options": []
+    },
+    {
+      "id": 17,
+      "title": "Typical Usage",
+      "type": "list",
+      "description": "e.g., Spends several hours online daily, mostly on social media, e-commerce, and tech blogs.",
+      "options": []
+    },
+    {
+      "id": 18,
+      "title": "Social Media",
+      "type": "list",
+      "description": "e.g., Active on LinkedIn, Twitter, and Reddit.",
+      "options": []
+    },
+    {
+      "id": 19,
+      "title": "Online Shopping Habits",
+      "type": "list",
+      "description": "e.g., Researches products thoroughly before purchasing, prefers online reviews, uses mobile apps for shopping.",
+      "options": []
+    },
+    {
+      "id": 20,
+      "title": "Personality",
+      "type": "text",
+      "description": "e.g., Analytical, Efficient, Curious, Independent.",
+      "options": []
+    },
+    {
+      "id": 21,
+      "title": "Values",
+      "type": "list",
+      "description": "e.g., Quality, Efficiency, Innovation, Transparency.",
+      "options": []
+    },
+    {
+      "id": 22,
+      "title": "Quote",
+      "type": "text",
+      "description": "e.g., \"I need information, and I need it fast.\"",
+      "options": []
+    },
+    {
+      "id": 23,
+      "title": "Scenario/User Story",
+      "type": "text",
+      "description": "e.g., \"Tina is looking to upgrade her laptop. She needs a powerful and portable device for her work. She starts by searching online, comparing different models, and reading reviews. She wants to find a reliable website with clear product specifications and a secure checkout process.\"",
+      "options": []
+    },
+    {
+      "id": 24,
+      "title": "Visual Style Preferences",
+      "type": "text",
+      "description": "e.g., Modern, clean, minimalist, tech-focused.",
+      "options": []
+    },
+    {
+      "id": 25,
+      "title": "Notes",
+      "type": "list",
+      "description": "e.g., Include any additional relevant information.",
+      "options": []
+    }
+  ]
+}
