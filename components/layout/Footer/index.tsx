@@ -33,6 +33,18 @@ export default function Footer() {
           </Section>
           <Section title="Current Projects">
             <ul className="text-sm space-y-2">
+              <ExternalLink
+                href="https://quick-feedback.xyz/"
+                name="Quick feedback"
+              />
+            </ul>
+            <ul className="text-sm space-y-2">
+              <ExternalLink
+                href="https://novella.adeolaade.com/"
+                name="Novella"
+              />
+            </ul>
+            <ul className="text-sm space-y-2">
               <ExternalLink href="https://habiterie.com/" name="Habiterie" />
             </ul>
           </Section>
