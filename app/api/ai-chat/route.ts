@@ -5,55 +5,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY!,
 });
 
-function isAllowedOrigin(origin: string | null): boolean {
-  if (!origin) return false; // not your case
-  if (origin.startsWith("plugin://")) return true;
-  if (origin === "https://adeolaade.com") return true;
-  if (origin === "http://localhost:5173") return true;
-  return false;
-}
-
-function corsHeaders(origin: string | null): {
-  "Access-Control-Allow-Origin"?: string;
-  Vary: string;
-  "Access-Control-Allow-Methods"?: string;
-  "Access-Control-Allow-Headers"?: string;
-} {
-  if (!isAllowedOrigin(origin))
-    return {
-      Vary: "Origin",
-    };
-
-  if (!origin)
-    return {
-      Vary: "Origin",
-    };
-
-  return {
-    "Access-Control-Allow-Origin": origin,
-    Vary: "Origin",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization",
-  };
-}
-
-export async function OPTIONS(req: NextRequest) {
-  const origin = req.headers.get("origin");
-
-  return new NextResponse(null, {
-    status: 204,
-    headers: corsHeaders(origin),
-  });
-}
-
 export async function POST(req: NextRequest) {
-  const origin = req.headers.get("origin");
-  const headers = corsHeaders(origin);
-
-  if (!headers["Access-Control-Allow-Origin"]) {
-    return new NextResponse("CORS blocked", { status: 403 });
-  }
-
   const { profile, document, messages } = await req.json();
 
   const systemPrompt = `
@@ -79,8 +31,7 @@ Rules:
     temperature: 0.4,
   });
 
-  return NextResponse.json(
-    { content: completion.choices[0].message.content },
-    { headers }
-  );
+  return NextResponse.json({
+    content: completion.choices[0].message.content,
+  });
 }
