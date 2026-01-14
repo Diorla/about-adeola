@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY!,
-});
+if (!process.env.OPENAI_API_KEY) {
+  console.error(
+    "OpenAI API key is missing. Please add OPENAI_API_KEY to your environment variables."
+  );
+}
 
 type ContextDoc = {
   fileContent: string;
@@ -11,6 +13,20 @@ type ContextDoc = {
 };
 
 export async function POST(req: NextRequest) {
+  if (!process.env.OPENAI_API_KEY) {
+    return Response.json(
+      {
+        error:
+          "OpenAI API key is not configured. Please add OPENAI_API_KEY to your environment variables in Project Settings.",
+      },
+      { status: 500 }
+    );
+  }
+
+  const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+
   const {
     profile,
     document,
